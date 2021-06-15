@@ -1,0 +1,2283 @@
+﻿"19:43:19, 20 April 2021: Compressed sources"!
+
+"Ensure all structures have calculated size to avoid recompilation messages later"
+ExternalStructure allSubclasses do: [:e | e ensureDefined]!
+
+SessionManager current bootFinished!
+
+DevelopmentSessionManager installNew!
+
+SessionManager current defaultResourceLibrary loadFlags: 0.
+SessionManager current stashBootInfo!
+
+"Mark all the booted packages as base"
+Package manager markAllPackagesAsBase!
+
+"Save the booted image"
+| devsesh |
+SourceManager default flushChanges.
+devsesh := SessionManager current.
+devsesh onPreSaveImage.
+[devsesh primSnapshot: devsesh imageFileName
+	backup: false
+	type: 0
+	maxObjects: 24576*1024
+] ensure: [devsesh onPostSaveImage]!
+
+"Remove unnecessary .chg files"
+File delete: 'DBOOT.chg'!
+
+SessionManager current onExit; primQuit: 0!
+
+"19:44:01, 20 April 2021: Dolphin Smalltalk Professional started"!
+
+"19:44:19, 20 April 2021: Dolphin Smalltalk Professional started"!
+
+"16:27:25, 24 April 2021: Dolphin Smalltalk Professional started"!
+
+2 factorial negated!
+
+2 factorial negated!
+
+3 + 4 * 6 + 3.!
+
+5 between:1 and:3 squared + 4.!
+
+5 between:1 and:3 squared + 4.!
+
+5 between:8 and:10.!
+
+13 between:1 and:3 squared + 4.!
+
+14 between:1 and:3 squared + 4.!
+
+"17:27:51, 24 April 2021: Image saved"!
+"21:01:52, 01 May 2021: Dolphin Smalltalk Professional started"!
+
+5 between:8 and:10.!
+
+Object subclass: #Punto
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Punto guid: (GUID fromString: '{9d249ff6-180d-4c28-a58c-64c388f49ca3}')!
+Punto comment: ''!
+!Punto categoriesForClass!Kernel-Objects! !
+Object subclass: #Punto
+	instanceVariableNames: 'posX posY'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Punto methodsFor!
+verX
+	^posX! !
+!Punto categoriesFor: #verX!public! !
+
+!Punto methodsFor!
+verY
+	^posY! !
+!Punto categoriesFor: #verY!public! !
+
+"21:14:31, 01 May 2021: Image saved"!
+
+!Punto class methodsFor!
+crearPunto: unPunto posX:x posY:y ! !
+!Punto class categoriesFor: #crearPunto:posX:posY:!public! !
+
+!Punto class methodsFor!
+crearPunto: unPunto posX: x posY: y ! !
+!Punto class categoriesFor: #crearPunto:posX:posY:!public! !
+
+!Punto class methodsFor!
+crearPunto: unPunto posX:x posY:y ! !
+!Punto class categoriesFor: #crearPunto:posX:posY:!public! !
+
+!Punto class methodsFor!
+posX:x posY:y 
+
+
+
+
+text: aString yes: yesPath no: noPath
+	"Answer an instance of the receiver (a Question) having aString as it's text and
+	leading to the nodes at yesPath and noPath as the result of those answers to its
+	question."
+
+	^self new text: aString yes: yesPath no: noPath! !
+!Punto class categoriesFor: #posX:posY:text:yes:no:!public! !
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+
+
+
+text: aString yes: yesPath no: noPath
+	"Answer an instance of the receiver (a Question) having aString as it's text and
+	leading to the nodes at yesPath and noPath as the result of those answers to its
+	question."
+
+	^self new text: aString yes: yesPath no: noPath! !
+!Punto class categoriesFor: #posX:posY:text:yes:no:!public! !
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+Punto class removeSelector: #crearPunto:posX:posY: ifAbsent: []!
+
+Punto class removeSelector: #posX:posY:text:yes:no: ifAbsent: []!
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+"21:31:19, 01 May 2021: Image saved"!
+
+|punto|
+punto:= Punto posX: 2 posY: 5
+
+!
+
+|punto|
+punto:= Punto posX:2 posY:5!
+
+punto:= Punto posX:2 posY:5
+
+punto.verX!
+
+punto verX!
+
+punto:= Punto posX:2 posY:5
+
+punto verX!
+
+|punto|
+punto:= Punto posX:2 posY:5
+
+punto verX!
+
+|punto|
+punto:= Punto posX:2 posY:5
+
+punto verX!
+
+!Punto class methodsFor!
+crearPuntoposX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #crearPuntoposX:posY:!public! !
+
+!Punto class methodsFor!
+crearPuntoposX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #crearPuntoposX:posY:!public! !
+
+!Punto class methodsFor!
+crearPuntoposX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #crearPuntoposX:posY:!public! !
+
+|punto|
+punto:= Punto crearPuntoposX: 2 posY: 5
+
+punto verX!
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+Punto class removeSelector: #crearPuntoposX:posY: ifAbsent: []!
+
+!Punto class methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #posX:posY:!public! !
+
+!Punto methodsFor!
+posX: x posY:y 
+
+	^self new posX:x posY:y! !
+!Punto categoriesFor: #posX:posY:!public! !
+
+!Punto methodsFor!
+posX: x posY:y 
+
+	posX :=x.
+	posY := y.
+
+! !
+!Punto categoriesFor: #posX:posY:!public! !
+
+!Punto methodsFor!
+posX: x posY:y 
+
+	posX :=x.
+	posY := y.
+
+! !
+!Punto categoriesFor: #posX:posY:!public! !
+
+punto:= Punto crearPuntoposX: 2 posY: 5
+
+punto verX!
+
+|punto|
+punto:= Punto crearPuntoposX: 2 posY: 5
+
+punto verX
+
+!
+
+|punto|
+punto:= Punto posX: 2 posY: 5!
+
+|punto|
+punto:= Punto posX: 2 posY: 5
+
+punto 
+
+!
+
+|punto|
+punto:= Punto posX: 2 posY: 5!
+
+punto:= Punto posX: 2 posY: 5!
+
+punto verX.!
+
+punto verX verY.!
+
+punto:= Punto posX: 2 posY: 5
+
+punto verX verY.!
+
+
+punto:= Punto posX: 2 posY: 5
+
+punto verX.
+!
+
+punto verX!
+
+punto verX verY.!
+
+punto verX!
+
+punto posX!
+
+punto:= Punto posX: 2 posY: 5
+
+punto verX.
+punto verY.
+!
+
+punto verX.
+punto verY.
+!
+
+
+punto verX.
+punto verY.
+!
+
+punto verY.!
+
+punto verX.!
+
+
+punto verX.
+punto verY.!
+
+punto:= Punto posX: 2 posY: 5
+
+punto verX.
+punto verY.
+!
+
+punto verX.
+punto verY.!
+
+!Punto class methodsFor!
+crearPuntoposX: x posY:y 
+
+	^self new posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #crearPuntoposX:posY:!public! !
+
+Punto class removeSelector: #posX:posY: ifAbsent: []!
+
+!Punto methodsFor!
+crearPuntoposX: x posY:y 
+
+
+	posX :=x.
+	posY := y.
+
+! !
+!Punto categoriesFor: #crearPuntoposX:posY:!public! !
+
+Punto removeSelector: #posX:posY: ifAbsent: []!
+
+punto verX.
+punto verY.!
+
+!Punto methodsFor!
+modX:x
+posX:=x.! !
+!Punto categoriesFor: #modX:!public! !
+
+!Punto methodsFor!
+modY:y
+posY:=y.! !
+!Punto categoriesFor: #modY:!public! !
+
+punto verX.!
+
+punto modX:4
+
+punto verX.!
+
+
+punto:= Punto crearPuntoposX: 2 posY: 5
+punto modX:4
+
+punto verX.
+punto verY.!
+
+punto:= Punto crearPuntoposX: 2 posY: 5!
+
+punto verX.!
+
+punto modX:4
+!
+
+punto modX:4 verX.!
+
+punto modX:4 verX
+!
+
+punto modX:4.!
+
+"21:48:50, 01 May 2021: Image saved"!
+
+"21:48:57, 01 May 2021: Image saved"!
+
+"14:22:28, 04 May 2021: Dolphin Smalltalk Professional started"!
+
+punto:= Punto crearPuntoposX: 2 posY: 5
+punto modX:4.
+
+punto verX.!
+
+punto:= Punto crearPuntoposX: 2 posY: 5
+punto modX:4.!
+
+punto:= Punto crearPuntoposX: 2 posY: 5.
+!
+
+punto verX.!
+
+punto verX!
+
+punto := Punto crearPuntoposX: 2 posY: 5.
+punto modX:4.!
+
+punto modX:4.
+!
+
+punto1 := Punto crearPuntoposX: 2 posY: 5.
+!
+
+punto1 verX.
+!
+
+punto verX.
+!
+
+punto verX
+!
+
+punto verX.!
+
+punto verX.!
+
+punto:= Punto crearPuntoposX: 2 posY: 5
+
+punto verX.!
+
+5 + 1!
+
+punto:= Punto crearPuntoposX: 2 posY: 5
+!
+
+punto verX!
+
+punto:= Punto crearPuntoposX: 2 posY: 5!
+
+|punto|
+punto:= Punto crearPuntoposX: 2 posY: 5
+
+punto verX!
+
+punto verX
+!
+
+punto verX inspect!
+
+punto :=Punto crearPuntoposX: 2 posY: 3
+
+punto verX!
+
+punto:=Punto crearPuntoposX: 2 posY: 3
+
+punto verX!
+
+punto:=Punto crearPuntoposX:2 posY:3
+
+punto verX!
+
+punto verX.!
+
+punto:=Punto crearPuntoposX:2 posY:3.
+
+punto verX.!
+
+"14:33:01, 04 May 2021: Dolphin Smalltalk Professional started"!
+
+punto := Punto crearPuntoposX: 2 posY: 5
+
+punto verX!
+
+punto crearPuntoposX: 2 posY: 4!
+
+punto verY.!
+
+punto crearPuntoposX: 2 posY: 4
+punto verY.
+!
+
+
+punto := Punto crearPuntoposX: 2 posY: 5
+
+punto crearPuntoposX: 2 posY: 5
+punto verY.
+!
+
+punto crearPuntoposX: 2 posY: 5.
+punto verY.!
+
+punto verY .!
+
+punto crearPuntoposX: 2 posY: 5.
+punto verY.
+!
+
+punto := Punto crearPuntoposX: 2 posY: 5.
+
+punto crearPuntoposX: 2 posY: 5.
+punto verY.
+!
+
+punto := Punto crearPuntoposX: 2 posY: 5.
+
+punto crearPuntoposX: 2 posY: 5.
+punto verY.
+!
+
+punto verY.!
+
+punto crearPuntoposX: 2 posY: 5.
+punto verY.!
+
+
+punto:=Punto crearPuntoposX:2 posY:5.
+
+punto crearPuntoposX: 2 posY: 5.
+punto verY.
+!
+
+point:=Punto crearPuntoposX: 2 posY: 4!
+
+!Punto class methodsFor!
+crearPuntoposX: x posY:y 
+
+	^(self new) posX:x posY:y
+
+
+
+! !
+!Punto class categoriesFor: #crearPuntoposX:posY:!public! !
+
+!Punto methodsFor!
+iniciarPuntoposX: x posY:y 
+
+
+	posX :=x.
+	posY := y.
+
+! !
+!Punto categoriesFor: #iniciarPuntoposX:posY:!public! !
+
+Punto removeSelector: #crearPuntoposX:posY: ifAbsent: []!
+
+!Punto class methodsFor!
+crearPuntoposX: x posY:y 
+
+	^(self new) iniciarPuntoposX: x posY: y
+
+
+
+! !
+!Punto class categoriesFor: #crearPuntoposX:posY:!public! !
+
+point:=Punto crearPuntoposX: 2 posY: 4
+!
+
+punto verX
+!
+
+punto:=Punto crearPuntoposX: 2 posY: 4
+
+punto verX!
+
+punto:=Punto crearPuntoposX: 2 posY: 4
+
+punto verX.!
+
+punto=Punto crearPuntoposX: 2 posY: 4!
+
+punto:=Punto crearPuntoposX: 2 posY: 4!
+
+
+punto verX.!
+
+punto verX.!
+
+punto modX: 5!
+
+punto verX.!
+
+puntoA:=Punto crearPuntoposX: 2 posY: 4!
+
+puntoA verY
+!
+
+puntoB:=Punto crearPuntoposX:12 posY: 14!
+
+puntoB verX
+!
+
+puntoA verY
+!
+
+!
+
+(((puntoB verX - puntoA  verX)squared)+((puntoB  verY -puntoA verY )squared))sqrt
+!
+
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt!
+
+(puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared
+
+
+
+
+
+
+
+!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect
+!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt
+!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect
+!
+
+"15:01:25, 04 May 2021: Image saved"!
+
+"18:31:08, 04 May 2021: Dolphin Smalltalk Professional started"!
+
+puntoA:=Punto crearPuntoposX: 2 posY: 4.
+
+puntoB:=Punto crearPuntoposX:12 posY: 14.!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect!
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 inspect!
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4!
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 inspect
+!
+
+((puntoB verX - puntoA  verX) squared+(puntoB  verY -puntoA verY )squared)sqrt inspect
+!
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 inspect!
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+!Punto class methodsFor!
+calcularDistanciaposx1:x1 posy1:y1 posx2:x2 posy2:y2
+
+^((x2 verX - x1 verX) squared+(y2  verY -y1 verY )squared)sqrt! !
+!Punto class categoriesFor: #calcularDistanciaposx1:posy1:posx2:posy2:!public! !
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 inspect!
+
+puntoA:=Punto crearPuntoposX: 2 posY: 4.
+
+puntoB:=Punto crearPuntoposX:12 posY: 14!
+
+puntoA:=Punto crearPuntoposX: 2 posY: 4.
+
+puntoB:=Punto crearPuntoposX:12 posY: 14!
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 inspect!
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 !
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4 !
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4.!
+
+Punto calcularDistanciaposx1: 12 posy1: 14 posx2: 2 posy2: 4.!
+
+"18:57:47, 04 May 2021: Image saved"!
+
+"19:57:21, 08 May 2021: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Biblioteca
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Biblioteca guid: (GUID fromString: '{857169ba-74f4-4f9f-b2f5-7eec22688842}')!
+Biblioteca comment: ''!
+!Biblioteca categoriesForClass!Kernel-Objects! !
+!Biblioteca class methodsFor!
+crearBiblioNombre:nombre! !
+!Biblioteca class categoriesFor: #crearBiblioNombre:!public! !
+
+Object subclass: #Biblioteca
+	instanceVariableNames: 'nombre'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Biblioteca class methodsFor!
+crearBiblioNombre:nombre
+
+^(self new) iniciarBibliotecaNombre:nombre! !
+!Biblioteca class categoriesFor: #crearBiblioNombre:!public! !
+
+Biblioteca class removeSelector: #crearBiblioNombre: ifAbsent: []!
+
+!Biblioteca class methodsFor!
+crearBibliotecaNombre:nombre
+
+^(self new) iniciarBibliotecaNombre:nombre! !
+!Biblioteca class categoriesFor: #crearBibliotecaNombre:!public! !
+
+!Biblioteca class methodsFor!
+crearBibliotecaNombre:nombre
+
+^(self new) iniciarBibliotecaNombre:nombre! !
+!Biblioteca class categoriesFor: #crearBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre
+
+
+	
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nombre
+
+
+nombre
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+
+nombre
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+
+nombre
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+
+nombre
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+
+nombre :=nom
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+
+nombre :=nom.
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+Biblioteca removeSelector: #iniciarBibliotecaNombre ifAbsent: []!
+
+!Biblioteca methodsFor!
+verNombre
+
+^nombre.! !
+!Biblioteca categoriesFor: #verNombre!public! !
+
+!Biblioteca methodsFor!
+verNombre
+
+^nombre! !
+!Biblioteca categoriesFor: #verNombre!public! !
+
+!Biblioteca methodsFor!
+modificarNombre:nom
+! !
+!Biblioteca categoriesFor: #modificarNombre:!public! !
+
+!Biblioteca methodsFor!
+modificarNombre:nom
+nombre:=nom
+! !
+!Biblioteca categoriesFor: #modificarNombre:!public! !
+
+!Biblioteca methodsFor!
+modificarNombre:nom
+nombre:=nom
+! !
+!Biblioteca categoriesFor: #modificarNombre:!public! !
+
+!Biblioteca methodsFor!
+modificarNombre:nom
+nombre:=nom
+! !
+!Biblioteca categoriesFor: #modificarNombre:!public! !
+
+!Biblioteca methodsFor!
+modificarNombre:nom
+nombre:=nom
+! !
+!Biblioteca categoriesFor: #modificarNombre:!public! !
+
+Object subclass: #Biblioteca
+	instanceVariableNames: 'nombre libros'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+
+nombre :=nom.
+libros:= OrderedCollection new
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+!Biblioteca methodsFor!
+agregarLibro:unLibro
+"Agrega un libro a la Biblioteca"
+libros add:unLibro.! !
+!Biblioteca categoriesFor: #agregarLibro:!public! !
+
+!Biblioteca methodsFor!
+eliminarLibro:unLibro
+"Elimina un libro de la Biblioteca"
+libros remove:unLibro! !
+!Biblioteca categoriesFor: #eliminarLibro:!public! !
+
+!Biblioteca methodsFor!
+existeLibro:unLibro
+"Retorna V si el libro está en la Biblioteca, F en caso contrario(cc)"
+^ libros includes:unLibro.! !
+!Biblioteca categoriesFor: #existeLibro:!public! !
+
+!Biblioteca methodsFor!
+esVacia
+"Retorna V si la Biblioteca no tiene libros, F en cc"
+^ libros empty.! !
+!Biblioteca categoriesFor: #esVacia!public! !
+
+Behavior subclass: #Libro
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Libro guid: (GUID fromString: '{fbdaa2e4-3db5-430b-b9f7-2dc645cf816f}')!
+Libro comment: ''!
+!Libro categoriesForClass!Kernel-Classes! !
+Behavior subclass: #Libro
+	instanceVariableNames: 'isbn titulo autor editorial'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Behavior subclass: #Libro
+	instanceVariableNames: 'isbn titulo autor editorial estado'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Behavior subclass: #Libro
+	instanceVariableNames: 'isbn titulo autor editorial estado dni'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Libro methodsFor!
+iniLibroIsbn:unIsbn tit:unTit aut:unAut edit:unaEdit
+"Inicializa una instancia de Libro"
+isbn:=unIsbn.
+titulo:=unTit.
+autor:=unAut.
+editorial:=unaEdit.
+estado:=false.
+dni:=0.! !
+!Libro categoriesFor: #iniLibroIsbn:tit:aut:edit:!public! !
+
+!Libro class methodsFor!
+crearLibroIsbn:unIsbn tit:unTit aut:unAut edit:unaEdit
+
+^(self new) iniLibroIsbn:unIsbn tit:unTit aut:unAut edit:unaEdit.! !
+!Libro class categoriesFor: #crearLibroIsbn:tit:aut:edit:!public! !
+
+!Libro methodsFor!
+iniLibroIsbn:unIsbn tit:unTit aut:unAut edit:unaEdit
+
+isbn:=unIsbn.
+titulo:=unTit.
+autor:=unAut.
+editorial:=unaEdit.
+estado:=false.
+dni:=0.! !
+!Libro categoriesFor: #iniLibroIsbn:tit:aut:edit:!public! !
+
+!Libro methodsFor!
+iniLibroIsbn:unIsbn tit:unTit aut:unAut edit:unaEdit
+
+isbn:=unIsbn.
+titulo:=unTit.
+autor:=unAut.
+editorial:=unaEdit.
+estado:=false.
+dni:=0.! !
+!Libro categoriesFor: #iniLibroIsbn:tit:aut:edit:!public! !
+
+!Libro methodsFor!
+verIsbn
+^ isbn.! !
+!Libro categoriesFor: #verIsbn!public! !
+
+!Libro methodsFor!
+verTitulo
+
+^ titulo.! !
+!Libro categoriesFor: #verTitulo!public! !
+
+!Libro methodsFor!
+ verAutor
+^ autor.! !
+!Libro categoriesFor: #verAutor!public! !
+
+!Libro methodsFor!
+verEditorial
+^ editorial.! !
+!Libro categoriesFor: #verEditorial!public! !
+
+!Libro methodsFor!
+verEditorial
+^ editorial.! !
+!Libro categoriesFor: #verEditorial!public! !
+
+!Libro methodsFor!
+verEstado
+^ estado.! !
+!Libro categoriesFor: #verEstado!public! !
+
+!Libro methodsFor!
+verDni
+^ dni.! !
+!Libro categoriesFor: #verDni!public! !
+
+!Libro methodsFor!
+verDni
+^ dni.! !
+!Libro categoriesFor: #verDni!public! !
+
+!Libro methodsFor!
+verDni
+^ dni.! !
+!Libro categoriesFor: #verDni!public! !
+
+!Libro methodsFor!
+ modificarIsbn:unIsbn
+isbn:=unIsbn.! !
+!Libro categoriesFor: #modificarIsbn:!public! !
+
+!Libro methodsFor!
+ modificarTit:unTit
+titulo :=unTit.! !
+!Libro categoriesFor: #modificarTit:!public! !
+
+!Libro methodsFor!
+modificarAutor:unAut
+
+autor:=unAut.! !
+!Libro categoriesFor: #modificarAutor:!public! !
+
+!Libro methodsFor!
+ modificarEditorial:unaEdit
+
+editorial:=unaEdit.! !
+!Libro categoriesFor: #modificarEditorial:!public! !
+
+!Libro methodsFor!
+modiEstado
+
+estado:=estado not.! !
+!Libro categoriesFor: #modiEstado!public! !
+
+!Libro methodsFor!
+modiEstado
+estado:=estado not.! !
+!Libro categoriesFor: #modiEstado!public! !
+
+!Libro methodsFor!
+modificarEstado
+estado:=estado not.! !
+!Libro categoriesFor: #modificarEstado!public! !
+
+!Libro methodsFor!
+modificarDni:unDni
+dni:=unDni.! !
+!Libro categoriesFor: #modificarDni:!public! !
+
+!Libro methodsFor!
+verAutor
+^ autor.! !
+!Libro categoriesFor: #verAutor!public! !
+
+!Libro methodsFor!
+verAutor
+^ autor.! !
+!Libro categoriesFor: #verAutor!public! !
+
+!Libro methodsFor!
+verAutor
+^ autor.! !
+!Libro categoriesFor: #verAutor!public! !
+
+ClassBuilder  moveClass: Libro toSuperclass: Object!
+
+!Libro methodsFor!
+verAutor
+^ autor.! !
+!Libro categoriesFor: #verAutor!public! !
+
+"20:22:11, 08 May 2021: Image saved"!
+
+"20:22:21, 08 May 2021: Image saved"!
+
+"20:23:17, 09 May 2021: Dolphin Smalltalk Professional started"!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^libros find: unIsbn! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i)) ifTrue:[ ^(libros at:i)] ].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn = unIsbn ) ifTrue:[ ^(libros at:i)] ].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn = unIsbn ) ifTrue:[ ^(libros at:i)] ].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn = unIsbn ) ifTrue:[ ^(libros at:i)] ].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+iniciarBibliotecaNombre:nom
+
+nombre :=nom.
+libros:= OrderedCollection new
+! !
+!Biblioteca categoriesFor: #iniciarBibliotecaNombre:!public! !
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+!
+
+
+b verNombre inspect
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'!
+
+b buscarLibroIsbn: 1 inspect!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.!
+
+book:=b buscarLibroIsbn:1.!
+
+book:=b buscarLibroIsbn:1 inspect .!
+
+book:=b buscarLibroIsbn:2 inspect .!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn = unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+book:=b buscarLibroIsbn:2 inspect .!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn = unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+book:=b buscarLibroIsbn:1.!
+
+book:=b buscarLibroIsbn:1.!
+
+book:=b buscarLibroIsbn:2.!
+
+book:=b buscarLibroIsbn:2.!
+
+book:=b buscarLibroIsbn:2.!
+
+book2:=b buscarLibroIsbn:2.!
+
+book2:=b buscarLibroIsbn:2.!
+
+book2:=b buscarLibroIsbn:2.
+
+book2 verNombre inspect.!
+
+book2 verNombre inspect.!
+
+book2:=b buscarLibroIsbn:2.!
+
+book:=b buscarLibroIsbn:1.!
+
+book2:=b buscarLibroIsbn:2.!
+
+book2:=b buscarLibroIsbn:2.
+!
+
+
+book2:=b buscarLibroIsbn:2.!
+
+book:=b buscarLibroIsbn:1.
+!
+
+book2:=b buscarLibroIsbn:2.
+!
+
+"20:43:00, 09 May 2021: Image saved"!
+
+"20:43:03, 09 May 2021: Dolphin Smalltalk Professional started"!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.!
+
+book2:=b buscarLibroIsbn:2.!
+
+book2:=b buscarLibroIsbn:2.!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+!
+
+book2:=b buscarLibroIsbn:2.
+!
+
+book2:=b buscarLibroIsbn:2.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) isbn=unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn =unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'!
+
+book:=b buscarLibroIsbn:1.
+!
+
+book2:=b buscarLibroIsbn:2.!
+
+book2:=b buscarLibroIsbn:3.!
+
+book:=b buscarLibroIsbn:1.
+!
+
+book2:=b buscarLibroIsbn: 2.!
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+book2 verNombre!
+
+book2:=b buscarLibroIsbn: 2.!
+
+book2 verNombre!
+
+book2:=b buscarLibroIsbn: 2.
+
+book2 verNombre!
+
+book2:=b buscarLibroIsbn: 1.
+
+book2 verNombre!
+
+book2:=b buscarLibroIsbn: 1.!
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+book2:=b buscarLibroIsbn: 1.!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+book2:=b buscarLibroIsbn: 1.
+!
+
+book2:=b buscarLibroIsbn: 2.!
+
+bib:=Biblioteca crearBibliotecaNombre:'chau'.
+!
+
+bib:=Biblioteca crearBibliotecaNombre:'chau'.
+!
+
+bib:=Biblioteca crearBibliotecaNombre:'chau'.
+!
+
+bib:=Biblioteca crearBibliotecaNombre:'chau'.
+!
+
+book2:=b buscarLibroIsbn: 2.
+!
+
+b agregarLibro: l.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+
+bib:=Biblioteca crearBibliotecaNombre:'chau'.
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+bib agregarLibro: l.
+
+book2:=b buscarLibroIsbn: 2.!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+
+bib:=Biblioteca crearBibliotecaNombre:'chau'.
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+bib agregarLibro: l.
+
+book2:=b buscarLibroIsbn: 2.!
+
+book2 inspect.!
+
+b buscarLibroIsbn: 2 inspect.!
+
+b buscarLibroIsbn: 1 inspect.!
+
+b buscarLibroIsbn: 2 inspect.!
+
+b existeLibro: l inspect.
+!
+
+b agregarLibro: l.!
+
+b existeLibro: l inspect.
+!
+
+b existeLibro: l inspect.
+!
+
+
+b existeLibro:l inspect.!
+
+bib existeLibro:l inspect.!
+
+b agregarLibro: l.
+bib agregarLibro: l.!
+
+bib agregarLibro: l.
+!
+
+bib agregarLibro: l.
+!
+
+b buscarLibroIsbn: 1 inspect.!
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+
+b buscarLibroIsbn: 2 inspect.!
+
+b buscarLibroIsbn: 1 inspect.!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+
+b buscarLibroIsbn: 1 inspect.!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'
+
+b agregarLibro: l.
+
+b buscarLibroIsbn: 1 inspect.!
+
+b agregarLibro: l.
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b agregarLibro: l.
+!
+
+b agregarLibro: l.
+!
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+l:=Libro crearLibroIsbn: 1 tit: 'titulo' aut: 'autor' edit: 'editorial'.
+
+b agregarLibro: l.
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+l:=Libro crearLibroIsbn:1 tit: 'titulo' aut: 'autor' edit: 'editorial'.
+
+b agregarLibro: l.
+
+b buscarLibroIsbn: 1 inspect.!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:1 tit: 'titulo' aut: 'autor' edit: 'editorial'.!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:1 tit: 'titulo' aut: 'autor' edit: 'editorial'.
+
+b agregarLibro: libro.
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b buscarLibroIsbn: 1 inspect.
+!
+
+b buscarLibroIsbn:1.!
+
+b buscarLibroIsbn:1.
+!
+
+b buscarLibroIsbn:2.!
+
+b buscarLibroIsbn:1.
+!
+
+"22:30:27, 09 May 2021: Image saved"!
+
+"22:31:04, 09 May 2021: Dolphin Smalltalk Professional started"!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:1 tit: 'titulo' aut: 'autor' edit: 'editorial'.
+
+b agregarLibro: libro.
+
+b buscarLibroIsbn:1.!
+
+b buscarLibroIsbn:2.!
+
+b buscarLibroIsbn:1.!
+
+!Biblioteca methodsFor!
+todosLosLibros
+
+^libros.! !
+!Biblioteca categoriesFor: #todosLosLibros!public! !
+
+lista:=b todosLosLibros inspect.
+!
+
+librob:=Libro crearLibroIsbn:4 tit: 'titulob' aut: 'autorb' edit: 'editorialb'.
+!
+
+b agregarLibro: librob .!
+
+b agregarLibro: librob .
+!
+
+
+lista:=b todosLosLibros inspect.!
+
+b agregarLibro: librob .
+!
+
+lista:=b todosLosLibros inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+
+
+b agregarLibro: libro.!
+
+lista:=b todosLosLibros inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+b agregarLibro: libro.
+b buscarLibroIsbn:1.
+lista:=b todosLosLibros inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+librob:=Libro crearLibroIsbn:22 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+librob:=Libro crearLibroIsbn:22 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo25' aut: 'aut25or' edit: 'edit25orial'.
+librob:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros inspect.
+
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verEstado=false) ifTrue:[^(lista at:i)] ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verEstado=false) ifTrue:[(lista at:i) buscarLibroIsbn:(lista at:i) verIsbn] ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verEstado=false) ifTrue:[(lista at:i) buscarLibroIsbn:(lista at:i) verIsbn] ifFalse:[^nil]].
+!
+
+encuentra verIsbn
+!
+
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verEstado=false) ifTrue:[(lista at:i) buscarLibroIsbn:(lista at:i) verIsbn] ifFalse:[^nil]].
+
+encuentra verIsbn.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verEstado=false) ifTrue:[(lista at:i) verTitulo ] ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verEstado=false) ifTrue:[(lista at:i) verTitulo ] ifFalse:[^nil]].
+
+encuentra inspect.!
+
+lista:=b todosLosLibros inspect.
+!
+
+lista:=b todosLosLibros inspect.
+!
+
+b agregarLibro: librob.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) ]  ifFalse:[^nil]].
+!
+
+encuentra inspect.
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verAutor ]  ifFalse:[^nil]].
+!
+
+lista:=b todosLosLibros.
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verAutor ]  ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verAutor ]  ifFalse:[^nil]].
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo25' aut: 'aut25or' edit: 'edit25orial'.
+librob:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'aut235or' edit: 'edit235orial'.
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verAutor ]  ifFalse:[^nil]].
+!
+
+lista:=b todosLosLibros.
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verAutor ]  ifFalse:[^nil]].
+!
+
+lista:=b todosLosLibros.
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[^nil]].
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo22' aut: 'autor22' edit: 'editorial22'.
+librob:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[nil]].
+!
+
+encuentra inspect.
+!
+
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[nil]].
+
+encuentra inspect.!
+
+encuentra inspect.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo22' aut: 'autor22' edit: 'editorial22'.
+librob:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros.
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[(lista at:i) verIsbn ]  ifFalse:[nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[(lista at:i) verIsbn ]  ifFalse:[nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[^nil]].
+!
+
+b buscarLibroIsbn:1.!
+
+b buscarLibroIsbn:22.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) ifTrue:[^(lista at:i) verIsbn ]  ifFalse:[^nil]].
+!
+
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].
+!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+librob:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+libro:=Libro crearLibroIsbn:22 tit: 'titulo22' aut: 'autor22' edit: 'editorial22'.
+
+b agregarLibro: libro.
+b agregarLibro: librob.
+
+lista:=b todosLosLibros.
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=true ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235 & (lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+lista:=b todosLosLibros.
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+lista size.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+"23:01:15, 09 May 2021: Image saved"!
+
+"17:14:13, 11 May 2021: Dolphin Smalltalk Professional started"!
+
+b:=Biblioteca crearBibliotecaNombre:'hola'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+lista size.!
+
+lista size.
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=11) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: 3 do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].!
+
+lista:=b todosLosLibros.
+!
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:10.!
+
+b buscarLibroIsbn:10.!
+
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.!
+
+lista:=b todosLosLibros.
+!
+
+b buscarLibroIsbn:10.!
+
+b buscarLibroIsbn:20.!
+
+b buscarLibroIsbn:20.!
+
+b buscarLibroIsbn:235.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i) verIsbn ]  
+ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)]  
+ifFalse:[^nil]].
+!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)]  
+ifFalse:[^nil]].!
+
+b agregarLibro: libroB.!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+b buscarLibroIsbn:235.!
+
+
+b buscarLibroIsbn:10.!
+
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)]  
+ifFalse:[^nil]].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.
+!
+
+b buscarLibroIsbn:10.!
+
+b buscarLibroIsbn:235.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)] ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:10.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+|libro|
+libro:=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro:=(libros at:i)] ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+|libro|
+libro:=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro:=(libros at:i)] ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)] ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=10) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+b buscarLibroIsbn:10.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)] ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:235.!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+encuentra:=1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].!
+
+b buscarLibroIsbn:235.!
+
+"15:54:16, 23 May 2021: Dolphin Smalltalk Professional started"!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.
+
+1 to: lista size do:[:i|((lista at:i) verIsbn=235) &((lista at:i) verEstado=false ) 
+ifTrue:[^(lista at:i)] ].
+
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:235.!
+
+lista:=b todosLosLibros.
+!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+lista:=b todosLosLibros.
+!
+
+lista:=b todosLosLibros.
+!
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:10.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ ^(libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]ifFalse:[^nil]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]. ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+lista:=b todosLosLibros.!
+
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:10.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]. ].
+
+^libro.! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]. ].
+
+^libro.! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+|libro|
+libro=nil.
+
+1 to: libros size do:[:i|((libros at:i) verIsbn=unIsbn ) ifTrue:[ libro= (libros at:i)]. ].
+
+^libro.! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:235.!
+
+lista:=b todosLosLibros.
+!
+
+
+b buscarLibroIsbn:10.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ifNone:[^nil]! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ifNone:[^nil].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ifNone:[^nil].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ifNone:[^nil].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+b buscarLibroIsbn:235.!
+
+b buscarLibroIsbn:10.!
+
+b buscarLibroIsbn:12.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+b buscarLibroIsbn:12.!
+
+b buscarLibroIsbn:10.!
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ifNone:[^nil].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+!Biblioteca methodsFor!
+buscarLibroIsbn:unIsbn
+
+^ libros detect: [:libro | libro verIsbn=unIsbn ] ifNone:[^nil].! !
+!Biblioteca categoriesFor: #buscarLibroIsbn:!public! !
+
+
+b buscarLibroIsbn:10.!
+
+b buscarLibroIsbn:235.!
+
+"16:04:42, 23 May 2021: Image saved"!
+
+"16:04:47, 23 May 2021: Image saved"!
+
+"16:05:35, 23 May 2021: Dolphin Smalltalk Professional started"!
+
+
+d:=Dictionary new at:'gorrion' put:'pajaro';
+at:'olmo' put:'arbol';
+at:'golondrina' put:'pajaro';
+at:'sauce' put:'arbol';
+yourself.!
+
+rta1:= d at:'golondrina'.!
+
+rta2:=d at:'gorrion'.!
+
+rta3:=d at:'pavo'.!
+
+rta3:=d at:'pavo'.!
+
+d at:'fuego' ifAbsent:['no lo se'].!
+
+d removeKey:'fuego' ifAbsent:[^nil].!
+
+rta3:=d at:'pavo'.!
+
+"16:18:36, 23 May 2021: Image saved"!
+
+"16:04:52, 01 June 2021: Dolphin Smalltalk Professional started"!
+
+"16:06:47, 01 June 2021: Image saved"!
+
+"15:19:06, 15 June 2021: Dolphin Smalltalk Professional started"!
+
+"15:41:11, 15 June 2021: Image saved to 'C:\Users\Nuzzo\Desktop\TpFinal-img.img7'"!
+
+"15:41:14, 15 June 2021: Image saved"!
+
+"19:27:38, 15 June 2021: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Biblioteca
+	instanceVariableNames: 'nombre libros direccion'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"19:27:53, 15 June 2021: Image saved"!
+
+"19:27:58, 15 June 2021: Image saved"!
+
