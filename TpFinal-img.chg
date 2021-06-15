@@ -2281,3 +2281,76 @@ Object subclass: #Biblioteca
 
 "19:27:58, 15 June 2021: Image saved"!
 
+"19:30:01, 15 June 2021: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Biblioteca
+	instanceVariableNames: 'nombre libros'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Mercaderia
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Mercaderia guid: (GUID fromString: '{30d0f5f9-072e-4883-8bd5-e17bbbb16da5}')!
+Mercaderia comment: ''!
+!Mercaderia categoriesForClass!Kernel-Objects! !
+Object subclass: #Mercaderia
+	instanceVariableNames: 'Id Nombre Descripcion Precio Imagen Tipo '
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Imagen:=unaImagen.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Imagen:=unaImagen.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
