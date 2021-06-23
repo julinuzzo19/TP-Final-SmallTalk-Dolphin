@@ -4,10 +4,9 @@
 negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
 
 "Creacion de mercaderias"
-mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 Categoria: 'Pizzas'.
-mercaderia1 inspect.
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
 mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
-mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 Categoria: 'Pastas'.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
 
 "Agregar mercaderias al menu del negocio"
 negocio agregarMercaderia: mercaderia1.

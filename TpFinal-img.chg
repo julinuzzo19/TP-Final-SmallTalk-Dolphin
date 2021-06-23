@@ -3792,3 +3792,270 @@ negocio inspect.!
 
 "20:29:48, 23 June 2021: Image saved"!
 
+"20:30:19, 23 June 2021: Dolphin Smalltalk Professional started"!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 Categoria: 'Pizzas'.
+mercaderia1 inspect.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 Categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:categoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=categoria.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+Comida removeSelector: #iniciarComidaId:nombre:descripcion:precio:Categoria: ifAbsent: []!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:categoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=categoria.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:categoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=categoria.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 Categoria: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 Categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:categoria:!public! !
+
+Comida class removeSelector: #crearComidaId:nombre:descripcion:precio:Categoria: ifAbsent: []!
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:categoria:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria: 'Pastas'.
+
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=unaCategoria.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Negocio methodsFor!
+verNombre
+^Nombre.! !
+!Negocio categoriesFor: #verNombre!public! !
+
+!Negocio methodsFor!
+verDireccion
+^Direccion.! !
+!Negocio categoriesFor: #verDireccion!public! !
+
+!Negocio methodsFor!
+verMenu
+
+^Menu.! !
+!Negocio categoriesFor: #verMenu!public! !
+
+Negocio removeSelector: #obtenerMercaderias ifAbsent: []!
+
+!Negocio methodsFor!
+verPedidos
+
+^Pedidos.! !
+!Negocio categoriesFor: #verPedidos!public! !
+
+Negocio removeSelector: #obtenerPedidos ifAbsent: []!
+
+!Negocio methodsFor!
+verRecaudacion
+
+^Recaudacion.! !
+!Negocio categoriesFor: #verRecaudacion!public! !
+
+Negocio removeSelector: #obtenerRecaudacion ifAbsent: []!
+
+!Negocio methodsFor!
+verTelefono
+^Telefono.! !
+!Negocio categoriesFor: #verTelefono!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+"20:39:22, 23 June 2021: Image saved"!
+
