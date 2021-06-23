@@ -2712,3 +2712,1083 @@ PrecioTotal:=preciototal.! !
 
 "19:13:52, 23 June 2021: Image saved"!
 
+"19:16:19, 23 June 2021: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Mercaderia
+	instanceVariableNames: 'Id Nombre Descripcion Precio Tipo'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+Mercaderia class removeSelector: #crearMercaderiaId:nombre:descripcion:precio:imagen:tipo: ifAbsent: []!
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo.
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+Mercaderia removeSelector: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo: ifAbsent: []!
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu
+
+^(self new) iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu.! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu
+
+^(self new) iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu.! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:!public! !
+
+Negocio class removeSelector: #crearNegocioNombre:Direccion:Telefono:Menu:Recaudacion: ifAbsent: []!
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=0.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:!public! !
+
+Negocio removeSelector: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion: ifAbsent: []!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Negocio methodsFor!
+obtenerRecaudacion
+
+^Recaudacion.! !
+!Negocio categoriesFor: #obtenerRecaudacion!public! !
+
+!Negocio methodsFor!
+obtenerMercaderias
+
+^Menu.! !
+!Negocio categoriesFor: #obtenerMercaderias!public! !
+
+!Negocio methodsFor!
+obtenerMercaderias
+
+^Menu.! !
+!Negocio categoriesFor: #obtenerMercaderias!public! !
+
+!Negocio methodsFor!
+obtenerRecaudacion
+
+^Recaudacion.! !
+!Negocio categoriesFor: #obtenerRecaudacion!public! !
+
+!Negocio methodsFor!
+obtenerPedidos
+
+^Pedidos.! !
+!Negocio categoriesFor: #obtenerPedidos!public! !
+
+!Bebida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo Mililitros:mililitros
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo.! !
+!Bebida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:tipo:Mililitros:!public! !
+
+!Bebida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo Mililitros:mililitros
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo mililitros:mililitros.! !
+!Bebida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:tipo:Mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo mililitros:mililitros! !
+!Bebida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo mililitros:mililitros
+
+! !
+!Bebida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo mililitros:mililitros
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo mililitros:mililitros
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:mililitros:!public! !
+
+!Bebida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo Mililitros:mililitros
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo mililitros:mililitros.! !
+!Bebida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:tipo:Mililitros:!public! !
+
+!Comida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo TipoComida:tipoComida
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo TipoComida:tipoComida.! !
+!Comida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:tipo:TipoComida:!public! !
+
+!Comida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo TipoComida:tipoComida
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo TipoComida:tipoComida.! !
+!Comida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:tipo:TipoComida:!public! !
+
+!Comida methodsFor!
+ iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo TipoComida:tipoComida! !
+!Comida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:TipoComida:!public! !
+
+!Comida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo TipoComida:tipoComida
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.
+TipoComida=tipoComida.! !
+!Comida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:TipoComida:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+"No necesario, utilizar subclases"
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo.
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+"No necesario, utilizar subclases"
+"^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo."
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+"No necesario, utilizar subclases"
+"Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo."! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Bebida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:mililitros:!public! !
+
+Bebida removeSelector: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:mililitros: ifAbsent: []!
+
+!Bebida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Mililitros:mililitros
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros.! !
+!Bebida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:Mililitros:!public! !
+
+!Bebida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Mililitros:mililitros
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros.! !
+!Bebida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:Mililitros:!public! !
+
+Bebida class removeSelector: #crearBebidaId:nombre:descripcion:precio:tipo:Mililitros: ifAbsent: []!
+
+!Comida methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+TipoComida=tipoComida.! !
+!Comida categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:TipoComida:!public! !
+
+Comida removeSelector: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:TipoComida: ifAbsent: []!
+
+!Comida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida.! !
+!Comida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+Comida class removeSelector: #crearBebidaId:nombre:descripcion:precio:tipo:TipoComida: ifAbsent: []!
+
+"19:40:23, 23 June 2021: Image saved"!
+
+menu:=OrderedCollection new.
+!
+
+|menu mercaderia1 mercaderia2 mercaderia3|
+
+"Creacion de mercaderias"
+mercaderia1:=Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| mercaderia1 mercaderia2 mercaderia3|
+
+"Creacion de mercaderias"
+mercaderia1:=Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| mercaderia1 mercaderia2 |
+
+"Creacion de mercaderias"
+mercaderia1:=Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| mercaderia1 mercaderia2 |
+
+"Creacion de mercaderias"
+mercaderia1:=Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| mercaderia1 mercaderia2 |
+
+"Creacion de mercaderias"
+mercaderia1:=Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 |
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+Comida class removeSelector: #crearBebidaId:nombre:descripcion:precio:TipoComida: ifAbsent: []!
+
+| menu mercaderia1 mercaderia2 negocio|
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+TipoComida=tipoComida.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+Comida removeSelector: #iniciarMercaderiaId:nombre:descripcion:precio:TipoComida: ifAbsent: []!
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+!Bebida class methodsFor!
+crearBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Mililitros:mililitros
+
+^(self new) iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros.! !
+!Bebida class categoriesFor: #crearBebidaId:nombre:descripcion:precio:Mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+Bebida removeSelector: #iniciarMercaderiaId:nombre:descripcion:precio:mililitros: ifAbsent: []!
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+| menu mercaderia1 mercaderia2 negocio|
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio|
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 1 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio|
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 1 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2 ; add: mercaderia3.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio|
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Creacion del menu de mercaderias del negocio"
+menu:=OrderedCollection new.
+menu add: mercaderia1 ; add: mercaderia2 ; add: mercaderia3.
+
+
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212' Menu: menu.
+
+negocio inspect.!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=OrderedCollection new.
+Recaudacion:=0.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+Negocio removeSelector: #iniciarNegocioNombre:Direccion:Telefono:Menu: ifAbsent: []!
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono
+
+^(self new) iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono.! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:!public! !
+
+Negocio class removeSelector: #crearNegocioNombre:Direccion:Telefono:Menu: ifAbsent: []!
+
+!Negocio methodsFor!
+agregarMercaderia:mercaderia
+
+Menu add: mercaderia.! !
+!Negocio categoriesFor: #agregarMercaderia:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio|
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio|
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+negocio inspect.!
+
+!Comida methodsFor!
+mostrarMercaderia
+
+^self.! !
+!Comida categoriesFor: #mostrarMercaderia!public! !
+
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia1 mostrarMercaderia.!
+
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia1 inspect.
+!
+
+!
+
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia1 inspect.!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+b:=Biblioteca crearBibliotecaNombre:'bibliotecaA'.
+libroB:=Libro crearLibroIsbn:10 tit: 'titulo10' aut: 'autor10' edit: 'editorial10'.
+libroA:=Libro crearLibroIsbn:235 tit: 'titulo235' aut: 'autor235' edit: 'editorial235'.
+
+
+b agregarLibro: libroA.
+b agregarLibro: libroB.
+
+lista:=b todosLosLibros.!
+
+!Bebida methodsFor!
+verNombre
+! !
+!Bebida categoriesFor: #verNombre!public! !
+
+Bebida removeSelector: #verNombre ifAbsent: []!
+
+!Mercaderia methodsFor!
+verNombre
+
+Nombre.! !
+!Mercaderia categoriesFor: #verNombre!public! !
+
+!Mercaderia methodsFor!
+verNombre
+
+^Nombre.! !
+!Mercaderia categoriesFor: #verNombre!public! !
+
+!Mercaderia methodsFor!
+verId
+
+^Id.! !
+!Mercaderia categoriesFor: #verId!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Mercaderia crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+Mercaderia removeSelector: #verId ifAbsent: []!
+
+Mercaderia removeSelector: #verNombre ifAbsent: []!
+
+!Mercaderia class methodsFor!
+verNombre
+
+^self Nombre.! !
+!Mercaderia class categoriesFor: #verNombre!public! !
+
+!Mercaderia class methodsFor!
+verNombre
+
+^self Nombre.! !
+!Mercaderia class categoriesFor: #verNombre!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Mercaderia crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' inspect .
+!
+
+Mercaderia class removeSelector: #verNombre ifAbsent: []!
+
+!Mercaderia methodsFor!
+verNombreins
+
+^Nombre.! !
+!Mercaderia categoriesFor: #verNombreins!public! !
+
+!Bebida methodsFor!
+verNombre
+super verNombreins.! !
+!Bebida categoriesFor: #verNombre!public! !
+
+!Bebida methodsFor!
+verNombre
+super verNombreins.! !
+!Bebida categoriesFor: #verNombre!public! !
+
+!Bebida methodsFor!
+verNombre
+super verNombreins.! !
+!Bebida categoriesFor: #verNombre!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' inspect .
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+Bebida removeSelector: #verNombre ifAbsent: []!
+
+!Mercaderia methodsFor!
+verNombre
+
+^Nombre.! !
+!Mercaderia categoriesFor: #verNombre!public! !
+
+!Mercaderia methodsFor!
+verNombre
+
+^Nombre.! !
+!Mercaderia categoriesFor: #verNombre!public! !
+
+Mercaderia removeSelector: #verNombreins ifAbsent: []!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' inspect .
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Mercaderia methodsFor!
+verId
+
+^Id.! !
+!Mercaderia categoriesFor: #verId!public! !
+
+!Mercaderia methodsFor!
+verDescripcion
+
+^Descripcion.! !
+!Mercaderia categoriesFor: #verDescripcion!public! !
+
+!Mercaderia methodsFor!
+verPrecio
+
+^Precio.! !
+!Mercaderia categoriesFor: #verPrecio!public! !
+
+!Mercaderia methodsFor!
+verTipo
+^Tipo.! !
+!Mercaderia categoriesFor: #verTipo!public! !
+
+!Bebida methodsFor!
+verMililitros
+^Mililitros.! !
+!Bebida categoriesFor: #verMililitros!public! !
+
+Comida removeSelector: #mostrarMercaderia ifAbsent: []!
+
+!Comida methodsFor!
+verTipoComida! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+!Comida methodsFor!
+verTipoComida
+^TipoComida.! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' inspect .
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+TipoComida=tipoComida.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+TipoComida=tipoComida.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:tipoComida
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+TipoComida=tipoComida.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:TipoComida:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' .
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.!
+
+!Comida methodsFor!
+verTipoComida
+
+^TipoComida.! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+!Comida methodsFor!
+verTipoComida
+
+^TipoComida.! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' .
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Comida methodsFor!
+verTipoComida
+
+^TipoComida! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+!Comida methodsFor!
+verTipoComida
+
+^TipoComida.! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+!Comida methodsFor!
+verTipoComida
+
+^TipoComida.! !
+!Comida categoriesFor: #verTipoComida!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas' .
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 TipoComida: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 TipoComida: 'Pizzas'.
+mercaderia1 inspect.!
+
+Mercaderia subclass: #Comida
+	instanceVariableNames: 'Categoria'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Mercaderia subclass: #Comida
+	instanceVariableNames: 'Categoria'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Comida methodsFor!
+verCategoria
+
+^Categoria.! !
+!Comida categoriesFor: #verCategoria!public! !
+
+Comida removeSelector: #verTipoComida ifAbsent: []!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:categoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=categoria.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+Comida removeSelector: #iniciarComidaId:nombre:descripcion:precio:TipoComida: ifAbsent: []!
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+Comida class removeSelector: #crearComidaId:nombre:descripcion:precio:TipoComida: ifAbsent: []!
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio TipoComida:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+!Comida class methodsFor!
+crearComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria
+
+^(self new) iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio Categoria:unaCategoria.! !
+!Comida class categoriesFor: #crearComidaId:nombre:descripcion:precio:Categoria:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 Categoria: 'Pizzas'.
+mercaderia1 inspect.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 Categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+"20:29:43, 23 June 2021: Image saved"!
+
+"20:29:48, 23 June 2021: Image saved"!
+
