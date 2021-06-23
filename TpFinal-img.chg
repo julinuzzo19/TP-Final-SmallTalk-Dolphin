@@ -2354,3 +2354,361 @@ Imagen:=unaImagen.
 Tipo:=unTipo.! !
 !Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
 
+"19:47:12, 15 June 2021: Image saved"!
+
+Mercaderia subclass: #Comida
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Comida guid: (GUID fromString: '{403a92d4-9378-42f9-a6f5-9fafcf63862a}')!
+Comida comment: ''!
+!Comida categoriesForClass!Kernel-Objects! !
+Mercaderia subclass: #Bebida
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Bebida guid: (GUID fromString: '{3e7089a5-8078-4a0e-a161-61c9bedbaadd}')!
+Bebida comment: ''!
+!Bebida categoriesForClass!Kernel-Objects! !
+Mercaderia subclass: #Bebida
+	instanceVariableNames: 'Mililitros'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Mercaderia subclass: #Comida
+	instanceVariableNames: 'TipoComida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Mercaderia subclass: #Comida
+	instanceVariableNames: 'TipoComida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Mercaderia subclass: #Comida
+	instanceVariableNames: 'TipoComida'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+"20:00:41, 15 June 2021: Image saved"!
+
+"20:00:43, 15 June 2021: Image saved"!
+
+"19:13:18, 22 June 2021: Dolphin Smalltalk Professional started"!
+
+"21:55:10, 22 June 2021: Image saved"!
+"18:50:09, 23 June 2021: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Negocio
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Negocio guid: (GUID fromString: '{e714b91b-ecc1-4e63-8d75-375a9300ae72}')!
+Negocio comment: ''!
+!Negocio categoriesForClass!Kernel-Objects! !
+!Negocio methodsFor!
+CobrarPedido
+! !
+!Negocio categoriesFor: #CobrarPedido!public! !
+
+!Negocio methodsFor!
+ObtenerMercaderias
+! !
+!Negocio categoriesFor: #ObtenerMercaderias!public! !
+
+!Negocio methodsFor!
+ActualizarRecaudacion! !
+!Negocio categoriesFor: #ActualizarRecaudacion!public! !
+
+!Negocio methodsFor!
+GuardarPedido! !
+!Negocio categoriesFor: #GuardarPedido!public! !
+
+!Negocio methodsFor!
+GuardarPedido! !
+!Negocio categoriesFor: #GuardarPedido!public! !
+
+!Negocio methodsFor!
+GuardarPedido! !
+!Negocio categoriesFor: #GuardarPedido!public! !
+
+!Negocio methodsFor!
+iniciarNegocio! !
+!Negocio categoriesFor: #iniciarNegocio!public! !
+
+!Negocio class methodsFor!
+crearNegocio! !
+!Negocio class categoriesFor: #crearNegocio!public! !
+
+!Negocio methodsFor!
+cobrarPedido
+! !
+!Negocio categoriesFor: #cobrarPedido!public! !
+
+Negocio removeSelector: #CobrarPedido ifAbsent: []!
+
+!Negocio methodsFor!
+guardarPedido! !
+!Negocio categoriesFor: #guardarPedido!public! !
+
+Negocio removeSelector: #GuardarPedido ifAbsent: []!
+
+!Negocio methodsFor!
+obtenerMercaderias
+! !
+!Negocio categoriesFor: #obtenerMercaderias!public! !
+
+Negocio removeSelector: #ObtenerMercaderias ifAbsent: []!
+
+!Negocio methodsFor!
+actualizarRecaudacion! !
+!Negocio categoriesFor: #actualizarRecaudacion!public! !
+
+Negocio removeSelector: #ActualizarRecaudacion ifAbsent: []!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Pedido
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+Pedido guid: (GUID fromString: '{377fd478-56cb-477b-823d-1457f05bda5e}')!
+Pedido comment: ''!
+!Pedido categoriesForClass!Kernel-Objects! !
+!Pedido methodsFor!
+iniciarPedido! !
+!Pedido categoriesFor: #iniciarPedido!public! !
+
+!Pedido class methodsFor!
+crearPedido! !
+!Pedido class categoriesFor: #crearPedido!public! !
+
+Object subclass: #Pedido
+	instanceVariableNames: 'Numero Mercaderias Fecha Hora PrecioTotal'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Pedido
+	instanceVariableNames: 'Numero Mercaderias Fecha Hora PrecioTotal'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+Negocio class removeSelector: #crearNegocio ifAbsent: []!
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+^(self new) iniciarNegocioNombre:nombre! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+^(self new) iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion.! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+^(self new) iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion.! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+Negocio removeSelector: #iniciarNegocioNombre:Direccion: ifAbsent: []!
+
+Negocio removeSelector: #iniciarNegocio ifAbsent: []!
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=recaudacion.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=recaudacion.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=recaudacion.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=recaudacion.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=recaudacion.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono Menu:menu Recaudacion:recaudacion
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=menu.
+Recaudacion:=recaudacion.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:Menu:Recaudacion:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Imagen:=unaImagen.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio imagen:unaImagen tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Imagen:=unaImagen.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:imagen:tipo:!public! !
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+Pedido removeSelector: #iniciarPedido ifAbsent: []!
+
+!Pedido class methodsFor!
+crearPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal! !
+!Pedido class categoriesFor: #crearPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+Pedido class removeSelector: #crearPedido ifAbsent: []!
+
+!Pedido class methodsFor!
+crearPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal
+
+^(self new) iniciarPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal! !
+!Pedido class categoriesFor: #crearPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+!Pedido class methodsFor!
+crearPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal
+
+^(self new) iniciarPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal.! !
+!Pedido class categoriesFor: #crearPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+!Pedido class methodsFor!
+crearPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal
+
+^(self new) iniciarPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal.! !
+!Pedido class categoriesFor: #crearPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal
+
+Numero:=numero.
+Mercaderias:=mercaderias.
+Fecha:=fecha.
+Hora:=hora.
+PrecioTotal:=preciototal.! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias Fecha:fecha Hora:hora PrecioTotal:preciototal
+
+Numero:=numero.
+Mercaderias:=mercaderias.
+Fecha:=fecha.
+Hora:=hora.
+PrecioTotal:=preciototal.! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:Fecha:Hora:PrecioTotal:!public! !
+
+"19:13:50, 23 June 2021: Image saved"!
+
+"19:13:52, 23 June 2021: Image saved"!
+
