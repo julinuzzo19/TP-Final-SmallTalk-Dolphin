@@ -4059,3 +4059,3525 @@ negocio inspect.!
 
 "20:39:22, 23 June 2021: Image saved"!
 
+"11:18:09, 29 June 2021: Dolphin Smalltalk Professional started"!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos ContadorPedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos ContadorPed'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=OrderedCollection new.
+Recaudacion:=0.
+Pedidos:=OrderedCollection new.
+ContadorPed:= (Prompter prompt: 'Nro. de pedidio inicial: ') asInteger.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=OrderedCollection new.
+Recaudacion:=0.
+Pedidos:=OrderedCollection new.
+ContadorPed:= 1.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := 1.! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+"Creacion del negocio"
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := 0.
+	ContadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber.! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+!Negocio methodsFor!
+verContadorPed
+! !
+!Negocio categoriesFor: #verContadorPed!public! !
+
+!Negocio methodsFor!
+verContadorPed
+	^ContadorPed! !
+!Negocio categoriesFor: #verContadorPed!public! !
+
+!Negocio methodsFor!
+verContadorPed
+	^ContadorPed! !
+!Negocio categoriesFor: #verContadorPed!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+"Creacion del negocio"
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := 1.
+	"ContadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber."! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+"Creacion del negocio"
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := 1.
+	"ContadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber."! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre:nombre Direccion:direccion Telefono:telefono ContadorPed:contadorPed
+
+^(self new) iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono ContadorPed:contadorPed.! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: contadorPed! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+Negocio class removeSelector: #crearNegocioNombre:Direccion:Telefono: ifAbsent: []!
+
+Negocio removeSelector: #iniciarNegocioNombre:Direccion:Telefono: ifAbsent: []!
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := contadorPed
+	"ContadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber."! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := contadorPed
+	"ContadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber."! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := contadorPed.
+	"ContadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber."! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+"Creacion del negocio"
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: 0.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+"Creacion del negocio"
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: 37.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: 37.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: 37.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed asInteger.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: (contadorPed asNumber).
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: (contadorPed asInteger ).
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed asNumber.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: ' asNumber.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := (Prompter prompt: 'Nro. pedido inicial: ' ) asNumber.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: contadorPed asNumber! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+			contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: (contadorPed) asNumber! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: contadorPed! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: contadorPed asNumber! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := contadorPed! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: contadorPed! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := contadorPed asNumber! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio class methodsFor!
+crearNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	^self new
+		iniciarNegocioNombre: nombre
+		Direccion: direccion
+		Telefono: telefono
+		ContadorPed: contadorPed asNumber! !
+!Negocio class categoriesFor: #crearNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+!Negocio methodsFor!
+iniciarNegocioNombre: nombre Direccion: direccion Telefono: telefono ContadorPed: contadorPed
+	Nombre := nombre.
+	Direccion := direccion.
+	Telefono := telefono.
+	Menu := OrderedCollection new.
+	Recaudacion := 0.
+	Pedidos := OrderedCollection new.
+	ContadorPed := contadorPed! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:ContadorPed:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+Transcript mecaderia1.
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+mercaderia1 Transcript.
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+Transcript show: 'Hola mundo'.
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+Transcript show: 'hola'.
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+Transcript show: 'hola'; cr.
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+1 to: 9 do: [:i|
+    1 to: i do: [:j|
+        Transcript show: j.
+        Transcript show: ' * '.
+        Transcript show: i.
+        Transcript show: ' = '.
+        Transcript show: j * i.
+        Transcript show: '  '.
+        ].
+    Transcript show: ' '; cr.
+    ].
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+1 to: 9 do: [:i|
+    1 to: i do: [:j|
+        Transcript show: j.
+        Transcript show: ' * '.
+        Transcript show: i.
+        Transcript show: ' = '.
+        Transcript show: j * i.
+        Transcript show: '  '.
+        ].
+    Transcript show: ' '; cr.
+    ].
+
+negocio inspect
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+
+ Transcript show: 'hola '; cr.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript show.
+ Transcript show: 'hola '; cr.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript show.
+Transcript clear.
+ Transcript show: 'hola '; cr.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript showNewView.
+ Transcript show: 'hola '; cr.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript showNewView.
+ Transcript show: 'hola '.
+Prompter prompt: 'presione "ENTER" paraterminar'.
+Transcript close.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript showNewView.
+ Transcript show: 'hola '.
+Transcript display: negocio.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript showNewView.
+ Transcript show: 'hola'.
+Transcript display: mercaderia3.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript showNewView.
+ Transcript show: 'hola'.
+Transcript display: mercaderia3.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript showNewView.
+ Transcript show: 'hola'.
+Transcript display: mercaderia3.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript clear.
+Transcript showNewView.
+ Transcript show: 'hola'.
+Transcript display: mercaderia3.
+
+
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript showNewView.
+ Transcript show: 'hola'.
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.
+Transcript clear.
+ Transcript show: 'hola'.
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript view.
+Transcript clear.
+Transcript show: 'hola'!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: 'hola'!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: contadorPed.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript display: contadorPed.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: negocio!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: mercaderia3.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: (mercaderia3) asString.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: ('Hola, el negocio se llama: ' + (negocio verNombre)).!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: ' + (negocio verNombre).!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: ';cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio inspect.
+Transcript show.
+Transcript clear.
+Transcript show: ('Hola, el negocio se llama: ' + 'pito').!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+
+"contadorPed := Prompter prompt: 'Nro. pedido inicial: '."
+contadorPed := 1000.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: ' + 'pito'!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+
+"contadorPed := Prompter prompt: 'Nro. pedido inicial: '."
+contadorPed := '1000'.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: ' + 'pito'!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: ' + 'pito'!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+menu := 67
+Transcript show: menu!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+menu := 67.
+Transcript show: menu!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+menu := 67.
+Transcript show: (menu asString).!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, elnegocio se llama. '.
+Transcript show: (negocio verNombre).!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, elnegocio se llama: '.
+Transcript show: (negocio verNombre); cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: negocio verPedidos size; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: (negocio verPedidos size); cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: (((negocio verPedidos) size) asString) ; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: (((negocio verPedidos) size) asString) ; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+
+x := negocio verPedidos size.
+"Transcript show: (((negocio verPedidos) size) asString) ; cr."!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := negocio verPedidos size.
+Transcript show: x ; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := negocio verPedidos size.
+x inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := negocio verPedidos size.
+Transcript show: x.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := negocio verPedidos size.
+Transcript display: x.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size) asString.
+x inspect.
+Transcript x.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size) asString.
+x inspect.
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := negocio verPedidos size.
+x inspect.
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size) asString.
+x inspect.
+!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+Transcript contadorPed; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+Transcript show:  contadorPed; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+Transcript show:  x; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+x := x + 1.
+x inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+x ispect.
+ y := x printString.
+y inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+x inspect.
+ y := x printString.
+y inspect.!
+
+Transcript show: 'Cantidad de pedidos: '.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+x := (negocio verPedidos size).
+x inspect.
+ y := x printString.
+y inspect.
+Transcript show: y; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: ((negocio verPedidos size) printString); cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+"Cómo mostrar cosas por consolita:"
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: ((negocio verPedidos size) printString); cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+"Cómo mostrar cosas por consolita:"
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: (negocio verPedidos size printString); cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+"Cómo mostrar cosas por consolita:"
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: (negocio verNombre); cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: negocio verPedidos size printString; cr.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+"Cómo mostrar cosas por consolita:"
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: negocio verNombre; cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: negocio verPedidos size printString; cr.!
+
+"14:56:07, 29 June 2021: Image saved"!
+
+"14:56:18, 29 June 2021: Image saved"!
+
+"14:56:33, 29 June 2021: Dolphin Smalltalk Professional started"!
+
+| mercaderia1 mercaderia2 mercaderia3 negocio contadorPed |
+"Creacion del negocio"
+contadorPed := Prompter prompt: 'Nro. pedido inicial: '.
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'
+			ContadorPed: contadorPed.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+"Cómo mostrar cosas por consolita:"
+Transcript show.
+Transcript clear.
+Transcript show: 'Hola, el negocio se llama: '.
+Transcript show: negocio verNombre; cr.
+Transcript show: 'Cantidad de pedidos: '.
+Transcript show: negocio verPedidos size printString; cr.!
+
+"14:58:14, 29 June 2021: Image saved"!
+
+"14:58:18, 29 June 2021: Image saved"!
+
