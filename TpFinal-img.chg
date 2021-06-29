@@ -4059,3 +4059,208 @@ negocio inspect.!
 
 "20:39:22, 23 June 2021: Image saved"!
 
+"19:16:42, 29 June 2021: Dolphin Smalltalk Professional started"!
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+"No necesario, utilizar subclases"
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo.
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+"No necesario, utilizar subclases"
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo.
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia class methodsFor!
+crearMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+^(self new) iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo.
+! !
+!Mercaderia class categoriesFor: #crearMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Mercaderia methodsFor!
+iniciarMercaderiaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio tipo:unTipo
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:=unTipo.! !
+!Mercaderia categoriesFor: #iniciarMercaderiaId:nombre:descripcion:precio:tipo:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Bebida'.
+Mililitros:=mililitros.
+
+! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Mililitros:=mililitros.
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Bebida'! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Mililitros:=mililitros.
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Bebida'! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Mililitros:=mililitros.
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Bebida'! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Mililitros:=mililitros.
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Bebida'! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Bebida methodsFor!
+iniciarBebidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio mililitros:mililitros
+
+Mililitros:=mililitros.
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Bebida'! !
+!Bebida categoriesFor: #iniciarBebidaId:nombre:descripcion:precio:mililitros:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Id:=unId.
+Nombre :=unNombre.
+Descripcion:=unaDescripcion.
+Precio:=unPrecio.
+Tipo:='Comida'.
+Categoria=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+| menu mercaderia1 mercaderia2 mercaderia3 negocio |
+
+"Creacion del negocio"
+negocio:=Negocio crearNegocioNombre: 'FASTFOOD' Direccion: 'Av. San martin 1200' Telefono:'42569212'.
+
+"Creacion de mercaderias"
+mercaderia1:= Comida crearComidaId: 1 nombre: 'Pizza Mozzarella' descripcion: 'Pizza con queso mozzarella al horno' precio: 300 categoria:'Pizzas'.
+mercaderia2:= Bebida crearBebidaId: 2 nombre: 'Cocacola' descripcion: 'Botella de cocacola pequeña' precio: 120 Mililitros: 600.
+mercaderia3:= Comida crearComidaId: 3 nombre: 'Ravioles de ricota' descripcion: 'Ravioles de ricota con salsa filetto' precio: 400 categoria:'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+negocio inspect.!
+
+"19:23:37, 29 June 2021: Image saved"!
+
+"19:26:05, 29 June 2021: Image saved"!
+
