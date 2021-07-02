@@ -5695,3 +5695,529 @@ negocio inspect.!
 
 "14:11:01, 02 July 2021: Image saved"!
 
+"14:13:11, 02 July 2021: Dolphin Smalltalk Professional started"!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos ContadorPedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+Object subclass: #Negocio
+	instanceVariableNames: 'Nombre Direccion Telefono Menu Recaudacion Pedidos ContadorPedidos'
+	classVariableNames: ''
+	poolDictionaries: ''
+	classInstanceVariableNames: ''!
+
+!Negocio methodsFor!
+iniciarNegocioNombre:nombre Direccion:direccion Telefono:telefono
+
+Nombre:=nombre.
+Direccion:=direccion.
+Telefono:=telefono.
+Menu:=OrderedCollection new.
+Recaudacion:=0.
+ContadorPedidos:=0.
+Pedidos:=OrderedCollection new.
+! !
+!Negocio categoriesFor: #iniciarNegocioNombre:Direccion:Telefono:!public! !
+
+!Negocio methodsFor!
+guardarPedido:unPedido
+
+Pedidos add: unPedido.
+
+Recaudacion:=Recaudacion + unPedido verPrecioTotal.
+ContadorPedidos:=ContadorPedidos+1.
+
+^Pedidos.! !
+!Negocio categoriesFor: #guardarPedido:!public! !
+
+!Negocio methodsFor!
+guardarPedido:unPedido
+
+Pedidos add: unPedido.
+
+Recaudacion:=Recaudacion + unPedido verPrecioTotal.
+ContadorPedidos:=ContadorPedidos+1.
+
+^Pedidos.! !
+!Negocio categoriesFor: #guardarPedido:!public! !
+
+!Negocio methodsFor!
+verContadorPedidos
+
+^ContadorPedidos.! !
+!Negocio categoriesFor: #verContadorPedidos!public! !
+
+Date today inspect.!
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias
+
+Numero:=numero.
+Mercaderias:=mercaderias.
+Fecha:=Date today."date"
+Hora:=0."time"
+PrecioTotal:=self calcularPrecioTotal: mercaderias.! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:!public! !
+
+Time now inspect.!
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias
+
+Numero:=numero.
+Mercaderias:=mercaderias.
+Fecha:=Date today."date"
+Hora:=Time now."time"
+PrecioTotal:=self calcularPrecioTotal: mercaderias.! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:!public! !
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias
+
+Numero:=numero.
+Mercaderias:=mercaderias.
+Fecha:=Date today.
+Hora:=Time now.
+PrecioTotal:=self calcularPrecioTotal: mercaderias.! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:!public! !
+
+!Pedido methodsFor!
+iniciarPedidoNumero:numero Mercaderias:mercaderias
+
+Numero:=numero.
+Mercaderias:=mercaderias.
+Fecha:=Date today.
+Hora:=Time now.
+PrecioTotal:=self calcularPrecioTotal: mercaderias.! !
+!Pedido categoriesFor: #iniciarPedidoNumero:Mercaderias:!public! !
+
+|negocio nombreNegocio dir tel|
+1 to: 3 do:[:i| 
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio:=Negocio crearNegocioNombre: nom Direccion: dir Telefono: tel inspect.
+ ].!
+
+| negocio nombreNegocio dir tel|
+1 to: 3 do:[:i| 
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nom Direccion: dir Telefono: tel inspect.
+ ].!
+
+| negocio nombreNegocio dir tel|
+1 to: 3 do:[:i| 
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nom Direccion: dir Telefono: tel inspect.
+ ].
+
+!
+
+| negocio nombreNegocio dir tel|
+1 to: 3 do:[:i| 
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel inspect.
+ ].
+
+!
+
+| mercaderia1 mercaderia2 mercaderia3 negocio pedido1  nombreNegocio dir tel|
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.!
+
+| mercaderia1 mercaderia2 mercaderia3 negocio pedido1  nombreNegocio dir tel|
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+"Creacion de mercaderias"
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 300
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 400
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista:=OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+pedido1:= Pedido crearPedidoNumero: 1 Mercaderias:lista.
+
+negocio guardarPedido: pedido1.
+
+negocio inspect.
+!
+
+| negocio nombreNegocio dir tel|
+1 to: 3 do:[:i| 
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel inspect.
+ ].
+!
+
+| negocio nombreNegocio dir tel|
+1 to: 3 do:[:i| 
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir:= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel:= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel inspect.
+ ].
+!
+
+
+"Bucle para crear negocio y agregarle mercaderias al menu"
+| negocio nombreNegocio dir tel|
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir:= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel:= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel inspect.!
+
+| negocio nombreNegocio dir tel|
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir:= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel:= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel inspect.!
+
+
+"Bucle para crear negocio y agregarle mercaderias al menu"
+| negocio nombreNegocio dir tel|
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir:= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel:= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel inspect.!
+
+| negocio nombreNegocio dir tel|
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir:= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel:= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel.
+negocio inspect.!
+
+| negocio dir tel |
+nombreNegocio:= Prompter  prompt: 'Ingrese el nombre del negocio'.
+dir:= Prompter  prompt: 'Ingrese la direccion del negocio'.
+tel:= Prompter  prompt: 'Ingrese el telefono del negocio'.
+
+negocio :=Negocio crearNegocioNombre: nombreNegocio Direccion: dir Telefono: tel.
+negocio inspect.!
+
+nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
+dir := Prompter prompt: 'Ingrese la direccion del negocio'.
+tel := Prompter prompt: 'Ingrese el telefono del negocio'.
+negocio := Negocio
+			crearNegocioNombre: nombreNegocio
+			Direccion: dir
+			Telefono: tel.
+
+1 to: 3
+	do: 
+		[:i |
+		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+		tipo = '1'
+			ifTrue: 
+				[nombre := Prompter prompt: 'Ingrese el nombre del producto'.
+				desc := Prompter prompt: 'Ingrese la descripcion del producto'.
+				precio := Prompter prompt: 'Ingrese el precio del producto'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros del producto'.
+				bebida := Bebida
+							crearBebidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio Mililitros mililitros.
+				negocio agregarMercaderia: bebida]
+			ifFalse: 
+				[nombre := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				desc := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				precio := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				categoria := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				comida := Comida
+							crearComidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocio agregarMercaderia: comida]].
+
+negocio inspect.!
+
+nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
+dir := Prompter prompt: 'Ingrese la direccion del negocio'.
+tel := Prompter prompt: 'Ingrese el telefono del negocio'.
+negocio := Negocio
+			crearNegocioNombre: nombreNegocio
+			Direccion: dir
+			Telefono: tel.
+
+1 to: 3
+	do: 
+		[:i |
+		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+		tipo = '1'
+			ifTrue: 
+				[nombre := Prompter prompt: 'Ingrese el nombre del producto'.
+				desc := Prompter prompt: 'Ingrese la descripcion del producto'.
+				precio := Prompter prompt: 'Ingrese el precio del producto'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros del producto'.
+				bebida := Bebida
+							crearBebidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio Mililitros: mililitros.
+				negocio agregarMercaderia: bebida]
+			ifFalse: 
+				[nombre := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				desc := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				precio := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				categoria := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				comida := Comida
+							crearComidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocio agregarMercaderia: comida]].
+
+negocio inspect.!
+
+nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
+dir := Prompter prompt: 'Ingrese la direccion del negocio'.
+tel := Prompter prompt: 'Ingrese el telefono del negocio'.
+negocio := Negocio
+			crearNegocioNombre: nombreNegocio
+			Direccion: dir
+			Telefono: tel.
+
+1 to: 3
+	do: 
+		[:i |
+		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+		tipo = '1'
+			ifTrue: 
+				[nombre := Prompter prompt: 'Ingrese el nombre del producto'.
+				desc := Prompter prompt: 'Ingrese la descripcion del producto'.
+				precio := Prompter prompt: 'Ingrese el precio del producto'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros del producto'.
+				bebida := Bebida
+							crearBebidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio Mililitros: mililitros.
+				negocio agregarMercaderia: bebida]
+			ifFalse: 
+				[nombre := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				desc := Prompter prompt: 'Ingrese la descripcion de la comida'.
+				precio := Prompter prompt: 'Ingrese el precio de la comida'.
+				categoria := Prompter prompt: 'Ingrese la categoria de la comida'.
+				comida := Comida
+							crearComidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocio agregarMercaderia: comida]].
+
+negocio inspect.Inspector!
+
+nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
+dir := Prompter prompt: 'Ingrese la direccion del negocio'.
+tel := Prompter prompt: 'Ingrese el telefono del negocio'.
+negocio := Negocio
+			crearNegocioNombre: nombreNegocio
+			Direccion: dir
+			Telefono: tel.
+
+1 to: 2
+	do: 
+		[:i |
+		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+		tipo = '1'
+			ifTrue: 
+				[nombre := Prompter prompt: 'Ingrese el nombre del producto'.
+				desc := Prompter prompt: 'Ingrese la descripcion del producto'.
+				precio := Prompter prompt: 'Ingrese el precio del producto'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros del producto'.
+				bebida := Bebida
+							crearBebidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio Mililitros: mililitros.
+				negocio agregarMercaderia: bebida]
+			ifFalse: 
+				[nombre := Prompter prompt: 'Ingrese el tipo de mercaderia a ingresar'.
+				desc := Prompter prompt: 'Ingrese la descripcion de la comida'.
+				precio := Prompter prompt: 'Ingrese el precio de la comida'.
+				categoria := Prompter prompt: 'Ingrese la categoria de la comida'.
+				comida := Comida
+							crearComidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocio agregarMercaderia: comida]].
+
+negocio inspect.!
+
+nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
+dir := Prompter prompt: 'Ingrese la direccion del negocio'.
+tel := Prompter prompt: 'Ingrese el telefono del negocio'.
+negocio := Negocio
+			crearNegocioNombre: nombreNegocio
+			Direccion: dir
+			Telefono: tel.
+
+1 to: 2
+	do: 
+		[:i |
+		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+		tipo = '1'
+			ifTrue: 
+				[nombre := Prompter prompt: 'Ingrese el nombre del producto'.
+				desc := Prompter prompt: 'Ingrese la descripcion del producto'.
+				precio := Prompter prompt: 'Ingrese el precio del producto'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros del producto'.
+				bebida := Bebida
+							crearBebidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio Mililitros: mililitros.
+				negocio agregarMercaderia: bebida]
+			ifFalse: 
+				[nombre := Prompter prompt: 'Ingrese el nombre de la comida'.
+				desc := Prompter prompt: 'Ingrese la descripcion de la comida'.
+				precio := Prompter prompt: 'Ingrese el precio de la comida'.
+				categoria := Prompter prompt: 'Ingrese la categoria de la comida'.
+				comida := Comida
+							crearComidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocio agregarMercaderia: comida]].
+
+negocio inspect.!
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria:=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria:=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+!Comida methodsFor!
+iniciarComidaId:unId nombre:unNombre descripcion:unaDescripcion precio:unPrecio categoria:unaCategoria
+
+Categoria:=unaCategoria.
+
+super iniciarMercaderiaId: unId nombre: unNombre descripcion: unaDescripcion precio: unPrecio tipo: 'Comida'.! !
+!Comida categoriesFor: #iniciarComidaId:nombre:descripcion:precio:categoria:!public! !
+
+1 to: 2
+	do: 
+		[:i |
+		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+		tipo = '1'
+			ifTrue: 
+				[nombre := Prompter prompt: 'Ingrese el nombre del producto'.
+				desc := Prompter prompt: 'Ingrese la descripcion del producto'.
+				precio := Prompter prompt: 'Ingrese el precio del producto'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros del producto'.
+				bebida := Bebida
+							crearBebidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio Mililitros: mililitros.
+				negocio agregarMercaderia: bebida]
+			ifFalse: 
+				[nombre := Prompter prompt: 'Ingrese el nombre de la comida'.
+				desc := Prompter prompt: 'Ingrese la descripcion de la comida'.
+				precio := Prompter prompt: 'Ingrese el precio de la comida'.
+				categoria := Prompter prompt: 'Ingrese la categoria de la comida'.
+				comida := Comida
+							crearComidaId: i
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocio agregarMercaderia: comida]].
+
+negocio inspect.!
+
+"17:29:34, 02 July 2021: Image saved"!
+
