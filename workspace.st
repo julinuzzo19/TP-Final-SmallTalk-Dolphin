@@ -1,4 +1,4 @@
-﻿| mercaderia1 mercaderia2 mercaderia3 negocio |
+﻿| mercaderia1 mercaderia2 mercaderia3 negocio pedido1 |
 
 negocio := Negocio
 			crearNegocioNombre: 'FASTFOOD'
@@ -28,6 +28,17 @@ mercaderia3 := Comida
 negocio agregarMercaderia: mercaderia1.
 negocio agregarMercaderia: mercaderia2.
 negocio agregarMercaderia: mercaderia3.
+
+
+
+lista:=OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+pedido1:= Pedido crearPedidoNumero: 1 Mercaderias:lista.
+
+"pedido1 verPrecioTotal: lista."
+
+negocio guardarPedido: pedido1.
 
 negocio inspect.
 
