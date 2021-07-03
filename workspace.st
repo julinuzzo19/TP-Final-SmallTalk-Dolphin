@@ -89,8 +89,12 @@ negocio guardarPedido: pedido2.
 negocio guardarPedido: pedido3.
 negocio inspect.
 
+"Reject obtener mercaderias por tipo"
+(negocio verMercaderiaTipo:'Bebida') inspect.
+
 "Select Pedidos mayores a $500"
 negocio verPedidosMayoresA:500 inspect.
+
 
 
 "Cómo mostrar cosas por consolita:"
@@ -102,7 +106,5 @@ Transcript show: 'Cantidad de pedidos: '.
 Transcript
 	show: negocio verPedidos size printString;
 	cr
-
-
 
 
