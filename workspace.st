@@ -1,16 +1,14 @@
-﻿| mercaderia1 mercaderia2 mercaderia3 negocio pedido1 lista |
-"-----------------------Bucle para crear negocio y agregarle mercaderias al menu------------------------
+﻿"-----------------------Bucle para crear negocio y agregarle mercaderias al menu------------------------
+| tipo |
 nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
 dir := Prompter prompt: 'Ingrese la direccion del negocio'.
 tel := Prompter prompt: 'Ingrese el telefono del negocio'.
-negocio := Negocio
+negocioSim := Negocio
 			crearNegocioNombre: nombreNegocio
 			Direccion: dir
 			Telefono: tel.
-1 to: 2
-	do: 
-		[:i |
-		tipo := Prompter prompt: 'Ingrese 1 si es bebida o 2 si es comida'.
+[tipo ~= '0'] whileTrue: 
+		[tipo := Prompter prompt: 'Ingrese 1 si es bebida, 2 si es comida o 0 para terminar.'.
 		tipo = '1'
 			ifTrue: 
 				[id := Prompter prompt: 'Ingrese el identificador de la mercaderia'.
@@ -24,8 +22,9 @@ negocio := Negocio
 							descripcion: desc
 							precio: precio
 							Mililitros: mililitros.
-				negocio agregarMercaderia: bebida]
-			ifFalse: 
+				negocioSim agregarMercaderia: bebida].
+		tipo = '2'
+			ifTrue: 
 				[id := Prompter prompt: 'Ingrese el identificador de la mercaderia'.
 				nombre := Prompter prompt: 'Ingrese el nombre de la comida'.
 				desc := Prompter prompt: 'Ingrese la descripcion de la comida'.
@@ -37,8 +36,8 @@ negocio := Negocio
 							descripcion: desc
 							precio: precio
 							categoria: categoria.
-				negocio agregarMercaderia: comida]].
-negocio inspect
+				negocioSim agregarMercaderia: comida]].
+negocioSim inspect.
 
 ------------------------------------------------------------------------------------------------------------------"
 negocio := Negocio
@@ -73,14 +72,14 @@ negocio agregarMercaderia: mercaderia3.
 
 "Seleccionar mercaderias de menu y crear pedido"
 lista := OrderedCollection new.
-lista2:=OrderedCollection new.
-lista3:=OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
 lista add: mercaderia1.
 lista add: mercaderia2.
 lista add: mercaderia3.
 lista2 add: mercaderia2.
-lista3 add:mercaderia1.
-lista3 add:mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
 pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
 pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
 pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
@@ -89,12 +88,19 @@ negocio guardarPedido: pedido2.
 negocio guardarPedido: pedido3.
 negocio inspect.
 
+"Diccionario"
+negocio verOcurrenciasMercaderia inspect.
+
+
 "Reject obtener mercaderias por tipo"
-(negocio verMercaderiaTipo:'Bebida') inspect.
+(negocio verMercaderiaTipo: 'Bebida') inspect.
 
 "Select Pedidos mayores a $500"
-negocio verPedidosMayoresA:500 inspect.
+(negocio verPedidosMayoresA: 500) inspect.
 
+"Collect"
+
+"Detect"
 
 
 "Cómo mostrar cosas por consolita:"
@@ -106,5 +112,3 @@ Transcript show: 'Cantidad de pedidos: '.
 Transcript
 	show: negocio verPedidos size printString;
 	cr
-
-
