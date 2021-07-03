@@ -55,7 +55,7 @@ mercaderia2 := Bebida
 			crearBebidaId: 2
 			nombre: 'Cocacola'
 			descripcion: 'Botella de cocacola pequeña'
-			precio: 1220
+			precio: 120
 			Mililitros: 600.
 mercaderia3 := Comida
 			crearComidaId: 3
@@ -63,12 +63,18 @@ mercaderia3 := Comida
 			descripcion: 'Ravioles de ricota con salsa filetto'
 			precio: 600
 			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
 
 "Agregar mercaderias al menu del negocio"
 negocio agregarMercaderia: mercaderia1.
 negocio agregarMercaderia: mercaderia2.
 negocio agregarMercaderia: mercaderia3.
-
+negocio agregarMercaderia: mercaderia4.
 
 "Seleccionar mercaderias de menu y crear pedido"
 lista := OrderedCollection new.
@@ -78,6 +84,7 @@ lista add: mercaderia1.
 lista add: mercaderia2.
 lista add: mercaderia3.
 lista2 add: mercaderia2.
+lista2 add: mercaderia4.
 lista3 add: mercaderia1.
 lista3 add: mercaderia2.
 pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
@@ -88,11 +95,15 @@ negocio guardarPedido: pedido2.
 negocio guardarPedido: pedido3.
 negocio inspect.
 
+
+"Detect"
+(negocio buscarPedidoPorNumero:5) inspect.
+
 "Sort"
-negocio ordenarMercaderiasPorMayorPrecio inspect.
+(negocio ordenarMercaderiasPorMayorPrecio) inspect.
 
 "Diccionario"
-negocio verOcurrenciasMercaderia inspect.
+(negocio verOcurrenciasMercaderia) inspect.
 
 "Reject obtener mercaderias por tipo"
 (negocio verMercaderiaTipo: 'Bebida') inspect.
@@ -101,8 +112,6 @@ negocio verOcurrenciasMercaderia inspect.
 (negocio verPedidosMayoresA: 500) inspect.
 
 "Collect"
-
-"Detect"
 
 
 

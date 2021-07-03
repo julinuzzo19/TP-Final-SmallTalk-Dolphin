@@ -11860,3 +11860,1058 @@ negocio ordenarMercaderiasPorMayorPrecio inspect.!
 
 "16:30:47, 03 July 2021: Image saved"!
 
+"16:30:51, 03 July 2021: Dolphin Smalltalk Professional started"!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3 no
+			mbre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3 no
+			mbre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	
+		|listaOrdenada|
+
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+
+^listaOrdenada.
+! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+
+listaOrdenada add: 10.
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada :=(self verMenu) asSortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio].
+
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio].
+
+	^listaOrdenada
+
+"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada :=(self verMenu) asSortedCollection.
+
+	^listaOrdenada
+
+"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada :=(self verMenu) asSortedCollection.
+
+1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j) verNombre]].
+
+	^listaOrdenada
+
+"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada :=(self verMenu) asSortedCollection.
+
+1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+
+	^listaOrdenada
+
+"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := self verMenu asSortedCollection.
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := self verMenu asSortedCollection.
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := self verMenu asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection  new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Pedidos at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Menu at: i) verMercaderias at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: 
+			[:i |
+			1 to: (Menu at: i) verMercaderias size
+				do: [:j | listaOrdenada add: ((Menu at: i) at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size
+		do: [:i | 1 to: (Menu at: i) verMercaderias size do: [:j | listaOrdenada add: ((Menu at: i) at: j)]].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	
+1 to: Menu size
+		do: [:i | (Menu at: i)].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	
+1 to: Menu size
+		do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 500
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 1220
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	
+1 to: Menu size
+		do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada
+
+	"listaOrdenada :=(self verMenu) asSortedCollection sortBlock: [:x :y | x verPrecio >= y verPrecio]."! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+"16:45:13, 03 July 2021: Image saved"!
+
