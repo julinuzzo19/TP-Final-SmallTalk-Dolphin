@@ -12915,3 +12915,1074 @@ ordenarMercaderiasPorMayorPrecio
 
 "16:45:13, 03 July 2021: Image saved"!
 
+"17:53:59, 03 July 2021: Dolphin Smalltalk Professional started"!
+
+!Negocio methodsFor!
+verPedidoPorId:unId
+
+|pedido|
+
+pedido:= Pedidos detect: [:pedido | pedido verId = unId].! !
+!Negocio categoriesFor: #verPedidoPorId:!public! !
+
+!Negocio methodsFor!
+verPedidoPorId:unId
+
+|pedido|
+
+pedido:= Pedidos detect: [:pedido | pedido verId = unId].
+
+^pedido.! !
+!Negocio categoriesFor: #verPedidoPorId:!public! !
+
+!Negocio methodsFor!
+verPedidoPorId:unId
+
+|pedido|
+
+pedido:= Pedidos detect: [:pedido | pedido verId = unId].
+
+^pedido.! !
+!Negocio categoriesFor: #verPedidoPorId:!public! !
+
+!Negocio methodsFor!
+buscarPedidoPorId:unId
+
+|pedido|
+
+pedido:= Pedidos detect: [:pedido | pedido verId = unId].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorId:!public! !
+
+Negocio removeSelector: #verPedidoPorId: ifAbsent: []!
+
+!Negocio methodsFor!
+buscarPedidoPorId:unId
+
+|pedido|
+
+pedido:= Pedidos detect: [:item | item verId = unId].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorId:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+negocio buscarPedidoPorId: 2 inspect.!
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+|pedido|
+
+pedido:= Pedidos detect: [:item | item verId = unNumero].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+Negocio removeSelector: #buscarPedidoPorId: ifAbsent: []!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+negocio buscarPedidoPorNumero: 2 inspect.!
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+|pedido|
+
+pedido:= Pedidos detect: [:item | item verNumero = unNumero].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+negocio buscarPedidoPorNumero: 2 inspect.!
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+|pedido|
+
+pedido:= Pedidos detect: [:item | (item verNumero) = unNumero].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+|pedido|
+
+pedido:= Pedidos detect: [:item | (item verNumero) = unNumero] ifNone:[^nil].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+|pedido|
+
+pedido:= Pedidos detect: [:item | (item verNumero) = unNumero] ifNone:[^nil].
+
+^pedido.! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+negocio buscarPedidoPorNumero: 2 inspect.!
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+|pedido|
+
+^Pedidos detect: [:item | (item verNumero) = unNumero] ifNone:[^nil].
+
+"^pedido."! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+negocio buscarPedidoPorNumero: 2 inspect.
+!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+(negocio buscarPedidoPorNumero:2) inspect.!
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+^Pedidos detect: [:item | (item verNumero) = unNumero] ifNone:[^nil].
+! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+!Negocio methodsFor!
+buscarPedidoPorNumero:unNumero
+
+^Pedidos detect: [:item | (item verNumero) = unNumero] ifNone:[^nil].
+! !
+!Negocio categoriesFor: #buscarPedidoPorNumero:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+negocio inspect.
+
+
+"Detect"
+(negocio buscarPedidoPorNumero:5) inspect.!
+
+!Pedido methodsFor!
+calcularPrecioTotal:listaMercaderia
+
+PrecioTotal:=0.
+
+"1 to:(listaMercaderia size) do:[:i | PrecioTotal:= (listaMercaderia at:i) verPrecio + PrecioTotal]."
+
+^PrecioTotal.
+
+! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal:listaMercaderia
+
+PrecioTotal:=0.
+
+"1 to:(listaMercaderia size) do:[:i | PrecioTotal:= (listaMercaderia at:i) verPrecio + PrecioTotal]."
+
+^PrecioTotal.
+
+! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal:listaMercaderia
+|listaSuma|
+PrecioTotal:=0.
+
+"1 to:(listaMercaderia size) do:[:i | PrecioTotal:= (listaMercaderia at:i) verPrecio + PrecioTotal]."
+listaSuma:= Mercaderias collect:[:alu| alu verNombre].
+
+^PrecioTotal.
+
+! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal:listaMercaderia
+
+PrecioTotal:=0.
+
+1 to:(listaMercaderia size) do:[:i | PrecioTotal:= (listaMercaderia at:i) verPrecio + PrecioTotal].
+
+
+^PrecioTotal.
+
+! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	PrecioTotal := 0.
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	PrecioTotal := 0.
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	PrecioTotal := 0.
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	|PrecioTotal|
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	|PrecioTotal|
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal.! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+
+negocio inspect.!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+
+negocio inspect.!
+
+!Pedido methodsFor!
+calcularPrecioTotal: listaMercaderia
+
+PrecioTotal:=0.
+	1 to: listaMercaderia size do: [:i | PrecioTotal := (listaMercaderia at: i) verPrecio + PrecioTotal].
+	^PrecioTotal.! !
+!Pedido categoriesFor: #calcularPrecioTotal:!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+
+negocio inspect.!
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+
+negocio inspect.!
+
+!Negocio methodsFor!
+verCategoriasComidas
+
+! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+
+! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+
+|listaComidas|
+
+listaComidas :=self verMercaderiaTipo: 'Comida'.! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+
+|listaComidas|
+
+listaComidas :=self verMercaderiaTipo: 'Comida'.
+
+^listaComidas.! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+
+|listaComidas|
+
+listaComidas :=self verMercaderiaTipo: 'Comida'.
+
+^listaComidas.! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+
+negocio inspect.
+
+"Collect"
+negocio verCategoriasComidas inspect.!
+
+!Negocio methodsFor!
+verCategoriasComidas
+	| listaComidas listaCategorias |
+	listaComidas := self verMercaderiaTipo: 'Comida'.
+	listaCategorias := listaComidas collect: [:alu | alu verNombre].
+	^listaComidas! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+	| listaComidas listaCategorias |
+	listaComidas := self verMercaderiaTipo: 'Comida'.
+	listaCategorias := listaComidas collect: [:alu | alu verNombre].
+	^listaCategorias! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+	| listaComidas listaCategorias |
+	listaComidas := self verMercaderiaTipo: 'Comida'.
+	listaCategorias := listaComidas collect: [:alu | alu verNombre].
+	^listaCategorias! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+!Negocio methodsFor!
+verCategoriasComidas
+	| listaComidas listaCategorias |
+	listaComidas := self verMercaderiaTipo: 'Comida'.
+	listaCategorias := listaComidas collect: [:comida | comida verCategoria].
+	^listaCategorias! !
+!Negocio categoriesFor: #verCategoriasComidas!public! !
+
+negocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.
+mercaderia1 := Comida
+			crearComidaId: 1
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+mercaderia2 := Bebida
+			crearBebidaId: 2
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+mercaderia3 := Comida
+			crearComidaId: 3
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+mercaderia4 := Bebida
+			crearBebidaId: 4
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros:2000.
+
+"Agregar mercaderias al menu del negocio"
+negocio agregarMercaderia: mercaderia1.
+negocio agregarMercaderia: mercaderia2.
+negocio agregarMercaderia: mercaderia3.
+negocio agregarMercaderia: mercaderia4.
+
+"Seleccionar mercaderias de menu y crear pedido"
+lista := OrderedCollection new.
+lista2 := OrderedCollection new.
+lista3 := OrderedCollection new.
+lista add: mercaderia1.
+lista add: mercaderia2.
+lista add: mercaderia3.
+lista2 add: mercaderia2.
+lista2 add: mercaderia4.
+lista3 add: mercaderia1.
+lista3 add: mercaderia2.
+pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
+pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
+pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
+negocio guardarPedido: pedido1.
+negocio guardarPedido: pedido2.
+negocio guardarPedido: pedido3.
+
+negocio inspect.
+
+"Collect"
+negocio verCategoriasComidas inspect.!
+
+"18:32:02, 03 July 2021: Image saved"!
+
+"18:32:09, 03 July 2021: Image saved"!
+

@@ -93,13 +93,16 @@ pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
 negocio guardarPedido: pedido1.
 negocio guardarPedido: pedido2.
 negocio guardarPedido: pedido3.
+
 negocio inspect.
 
+"Collect obtener las categorias de todas las comidas"
+negocio verCategoriasComidas inspect.
 
-"Detect"
+"Detect obtener un pedido por numero de pedido"
 (negocio buscarPedidoPorNumero:5) inspect.
 
-"Sort"
+"Sort ordenar por mayor a menor precio las mercaderias"
 (negocio ordenarMercaderiasPorMayorPrecio) inspect.
 
 "Diccionario"
@@ -110,9 +113,6 @@ negocio inspect.
 
 "Select Pedidos mayores a $500"
 (negocio verPedidosMayoresA: 500) inspect.
-
-"Collect"
-
 
 
 "Cómo mostrar cosas por consolita:"

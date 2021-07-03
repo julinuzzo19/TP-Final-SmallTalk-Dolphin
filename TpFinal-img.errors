@@ -4179,3 +4179,121 @@ BlockClosure>>on:do:
 [] in BlockClosure>>newProcess:
 ----------------------------------------------------------------------------------------------------
 
+ 2021-07-03T18:16:29.3477416-03:00: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #addToInteger:')
+
+Object>>doesNotUnderstand:
+SmallInteger>>+
+Pedido>>calcularPrecioTotal:
+Pedido>>iniciarPedidoNumero:Mercaderias:
+Pedido class>>crearPedidoNumero:Mercaderias:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T18:16:48.4108543-03:00: Unhandled exception - a MessageNotUnderstood('UndefinedObject does not understand #addToInteger:')
+
+Object>>doesNotUnderstand:
+SmallInteger>>+
+Pedido>>calcularPrecioTotal:
+Pedido>>iniciarPedidoNumero:Mercaderias:
+Pedido class>>crearPedidoNumero:Mercaderias:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
