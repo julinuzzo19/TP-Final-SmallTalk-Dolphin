@@ -40,22 +40,22 @@ negocioSim := Negocio
 negocioSim inspect.
 
 ------------------------------------------------------------------------------------------------------------------"
+"Creacion de mercaderias"
 negocio := Negocio
 			crearNegocioNombre: 'FASTFOOD'
 			Direccion: 'Av. San martin 1200'
 			Telefono: '42569212'.
-"Creacion de mercaderias"
 mercaderia1 := Comida
 			crearComidaId: 1
 			nombre: 'Pizza Mozzarella'
 			descripcion: 'Pizza con queso mozzarella al horno'
-			precio: 500
+			precio: 350
 			categoria: 'Pizzas'.
 mercaderia2 := Bebida
 			crearBebidaId: 2
 			nombre: 'Cocacola'
 			descripcion: 'Botella de cocacola pequeña'
-			precio: 120
+			precio: 1220
 			Mililitros: 600.
 mercaderia3 := Comida
 			crearComidaId: 3
@@ -88,9 +88,11 @@ negocio guardarPedido: pedido2.
 negocio guardarPedido: pedido3.
 negocio inspect.
 
+"Sort"
+negocio ordenarMercaderiasPorMayorPrecio inspect.
+
 "Diccionario"
 negocio verOcurrenciasMercaderia inspect.
-
 
 "Reject obtener mercaderias por tipo"
 (negocio verMercaderiaTipo: 'Bebida') inspect.
@@ -101,6 +103,7 @@ negocio verOcurrenciasMercaderia inspect.
 "Collect"
 
 "Detect"
+
 
 
 "Cómo mostrar cosas por consolita:"

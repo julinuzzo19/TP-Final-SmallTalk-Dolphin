@@ -2842,3 +2842,1163 @@ BlockClosure>>on:do:
 [] in BlockClosure>>newProcess:
 ----------------------------------------------------------------------------------------------------
 
+ 2021-07-03T16:11:37.2523679-03:00: Unhandled exception - a MessageNotUnderstood('OrderedCollection does not understand #as')
+
+OrderedCollection(Object)>>doesNotUnderstand:
+Negocio>>ordenarMercaderiasPorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:12:28.4850969-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:13:50.1995004-03:00: Unhandled exception - a MessageNotUnderstood('Negocio does not understand #Menu')
+
+Negocio(Object)>>doesNotUnderstand:
+Negocio>>ordenarMercaderiasPorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:14:03.6814663-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:27:54.8301594-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:28:20.5589495-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:29:07.5204467-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:29:36.0022385-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:29:52.6263134-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:30:16.9481892-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:30:27.4779209-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:31:49.5840966-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:32:14.5649361-03:00: Unhandled exception - a MessageNotUnderstood('SmallInteger does not understand #no')
+
+SmallInteger(Object)>>doesNotUnderstand:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:36:07.4494016-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:36:33.4200807-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:37:01.7203265-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:38:12.2789513-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:38:39.4060891-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #<=')
+
+Comida(Object)>>doesNotUnderstand:
+DefaultSortAlgorithm>>insertionSort:from:to:
+DefaultSortAlgorithm>>sort:from:to:limit:
+DefaultSortAlgorithm>>sort:from:to:
+SortedCollection>>sortFrom:to:
+SortedCollection>>reSort
+SortedCollection>>addAll:
+OrderedCollection(Collection)>>asSortedCollection
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:39:58.643835-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #verMercaderias')
+
+Comida(Object)>>doesNotUnderstand:
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-03T16:41:04.2704327-03:00: Unhandled exception - a MessageNotUnderstood('Comida does not understand #verMercaderias')
+
+Comida(Object)>>doesNotUnderstand:
+Negocio>>ordenarMercaderiasPorMayorPrecio
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
