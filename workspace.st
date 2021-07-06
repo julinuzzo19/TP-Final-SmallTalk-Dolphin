@@ -116,6 +116,7 @@ negocio verCategoriasComidas inspect.
 
 
 "Cómo mostrar cosas por consolita:"
+Transcript show.
 Transcript show: 'Hola, el negocio se llama: '.
 Transcript
 	show: negocio verNombre;
