@@ -90,9 +90,9 @@ lista3 add: mercaderia2.
 pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
 pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
 pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
-negocio guardarPedido: pedido1.
-negocio guardarPedido: pedido2.
-negocio guardarPedido: pedido3.
+negocio cobrarPedido: pedido1.
+negocio cobrarPedido: pedido2.
+negocio cobrarPedido: pedido3.
 
 negocio inspect.
 
@@ -114,14 +114,3 @@ negocio verCategoriasComidas inspect.
 "Select Pedidos mayores a $500"
 (negocio verPedidosMayoresA: 500) inspect.
 
-
-"Cómo mostrar cosas por consolita:"
-Transcript show.
-Transcript show: 'Hola, el negocio se llama: '.
-Transcript
-	show: negocio verNombre;
-	cr.
-Transcript show: 'Cantidad de pedidos: '.
-Transcript
-	show: negocio verPedidos size printString;
-	cr
