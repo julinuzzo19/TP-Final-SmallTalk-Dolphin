@@ -7050,3 +7050,630 @@ BlockClosure>>on:do:
 [] in BlockClosure>>newProcess:
 ----------------------------------------------------------------------------------------------------
 
+ 2021-07-07T19:50:04.1784707-03:00: Unhandled exception - a MessageNotUnderstood('FlipperInspector does not understand #verMercaderias')
+
+FlipperInspector(Object)>>doesNotUnderstand:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T19:51:25.8256964-03:00: Unhandled exception - a MessageNotUnderstood('FlipperInspector does not understand #verMercaderias')
+
+FlipperInspector(Object)>>doesNotUnderstand:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T19:55:09.828552-03:00: Unhandled exception - a MessageNotUnderstood('FlipperInspector does not understand #verMercaderias')
+
+FlipperInspector(Object)>>doesNotUnderstand:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T19:56:17.0276143-03:00: Unhandled exception - a MessageNotUnderstood('FlipperInspector does not understand #verMercaderias')
+
+FlipperInspector(Object)>>doesNotUnderstand:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T19:59:05.1396249-03:00: Unhandled exception - an Error('Array should not implement #add:')
+
+Array(Object)>>error:
+Array(Object)>>shouldNotImplement
+Array(ArrayedCollection)>>add:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T20:05:22.4051492-03:00: Unhandled exception - a MessageNotUnderstood('Pedido does not understand #asOrderedCollection')
+
+Pedido(Object)>>doesNotUnderstand:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T20:05:48.9616989-03:00: Unhandled exception - an Error('Array should not implement #add:')
+
+Array(Object)>>error:
+Array(Object)>>shouldNotImplement
+Array(ArrayedCollection)>>add:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T20:12:24.9203673-03:00: Unhandled exception - a MessageNotUnderstood('BlockClosure does not understand #listaMercaderias')
+
+BlockClosure(Object)>>doesNotUnderstand:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T20:13:08.7689593-03:00: Unhandled exception - an Error('Must be boolean')
+
+SmallInteger(Object)>>error:
+SmallInteger(Object)>>mustBeBoolean
+OrderedCollection>>detect:ifNone:
+OrderedCollection(Collection)>>detect:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T20:13:53.318536-03:00: Unhandled exception - an Error('Must be boolean')
+
+SmallInteger(Object)>>error:
+SmallInteger(Object)>>mustBeBoolean
+OrderedCollection>>detect:ifNone:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+
+ 2021-07-07T20:16:57.0579967-03:00: Unhandled exception - an Error('Array should not implement #add:')
+
+Array(Object)>>error:
+Array(Object)>>shouldNotImplement
+Array(ArrayedCollection)>>add:
+Negocio>>obtenerMercaderiasPorPedido:
+UndefinedObject>>{unbound}doIt
+CompiledExpression>>value:
+SmalltalkWorkspace>>evaluateRange:ifFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:debug:
+SmalltalkWorkspace>>evaluateItIfFail:
+SmalltalkWorkspace>>evaluateIt
+Symbol>>forwardTo:
+CommandDescription>>performAgainst:
+[] in Command>>value
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Command>>value
+ShellView>>performCommand:
+SmalltalkWorkspaceDocument(Shell)>>performCommand:
+CommandQuery>>perform
+DelegatingCommandPolicy(CommandPolicy)>>route:
+[] in Toolbar(View)>>onCommand:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+Cursor>>showWhile:
+Toolbar(View)>>onCommand:
+Toolbar>>command:id:
+ReferenceView(View)>>wmCommand:wParam:lParam:
+ReferenceView(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+Toolbar(ControlView)>>defaultWindowProcessing:wParam:lParam:
+MouseEvent(WindowsEvent)>>defaultWindowProcessing
+Toolbar(View)>>onLeftButtonReleased:
+Toolbar(View)>>wmLButtonUp:wParam:lParam:
+Toolbar(View)>>dispatchMessage:wParam:lParam:
+[] in InputState>>wndProc:message:wParam:lParam:cookie:
+BlockClosure>>ifCurtailed:
+GuiInputState(InputState)>>wndProc:message:wParam:lParam:cookie:
+ShellView(View)>>isDialogMessage:
+ShellView>>preTranslateMouseInput:
+ShellView(View)>>preTranslateMessage:
+GuiInputState(InputState)>>preTranslateMessage:
+GuiInputState(InputState)>>pumpMessage:
+GuiInputState(InputState)>>loopWhile:
+GuiInputState(InputState)>>mainLoop
+[] in GuiInputState(InputState)>>forkMain
+ExceptionHandler(ExceptionHandlerAbstract)>>markAndTry
+[] in ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>ifCurtailed:
+BlockClosure>>ensure:
+ExceptionHandler(ExceptionHandlerAbstract)>>try:
+BlockClosure>>on:do:
+[] in BlockClosure>>newProcess:
+----------------------------------------------------------------------------------------------------
+

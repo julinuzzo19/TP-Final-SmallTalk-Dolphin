@@ -1,4 +1,4 @@
-Transcript clear.
+﻿Transcript clear.
 miNegocio := Negocio
 			crearNegocioNombre: 'FASTFOOD'
 			Direccion: 'Av. San martin 1200'
@@ -55,6 +55,7 @@ continuar := true.
 					ifTrue: 
 						[unPedido calcularPrecioTotal: miNegocio verMenu.
 						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
 						MessageBox
 							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
 									, '  Total $' , unPedido verPrecioTotal printString
@@ -98,5 +99,7 @@ continuar := true.
 					cr.
 				pedidosM600 inspect.
 				miNegocio verOcurrenciasMercaderia inspect].
+
+				
 		opcion = '4' ifTrue: [continuar := false]].
 miNegocio inspect
