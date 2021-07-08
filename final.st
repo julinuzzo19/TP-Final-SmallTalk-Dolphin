@@ -101,6 +101,7 @@ continuar := true.
 				pedidosM600 inspect.
 				miNegocio verOcurrenciasMercaderia inspect.
 				miNegocio verCategoriasComidas inspect.
-				miNegocio ordenarMercaderiasPorMayorPrecio inspect].
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect.
+].
 		opcion = '4' ifTrue: [continuar := false]].
-miNegocio inspect
+miNegocio inspect.
