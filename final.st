@@ -93,13 +93,14 @@ continuar := true.
 				Transcript
 					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
 					cr.
-				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
 				Transcript
-					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
 					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
 				pedidosM600 inspect.
-				miNegocio verOcurrenciasMercaderia inspect].
-
-				
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect].
 		opcion = '4' ifTrue: [continuar := false]].
 miNegocio inspect
