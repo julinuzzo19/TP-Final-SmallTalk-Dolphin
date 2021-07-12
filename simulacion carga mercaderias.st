@@ -1,5 +1,4 @@
-﻿"-----------------------Bucle para crear negocio y agregarle mercaderias al menu------------------------
-| tipo |
+﻿| tipo |
 nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
 dir := Prompter prompt: 'Ingrese la direccion del negocio'.
 tel := Prompter prompt: 'Ingrese el telefono del negocio'.
@@ -37,80 +36,4 @@ negocioSim := Negocio
 							precio: precio
 							categoria: categoria.
 				negocioSim agregarMercaderia: comida]].
-negocioSim inspect.
-
-------------------------------------------------------------------------------------------------------------------"
-"Creacion de mercaderias"
-negocio := Negocio
-			crearNegocioNombre: 'FASTFOOD'
-			Direccion: 'Av. San martin 1200'
-			Telefono: '42569212'.
-mercaderia1 := Comida
-			crearComidaId: 1
-			nombre: 'Pizza Mozzarella'
-			descripcion: 'Pizza con queso mozzarella al horno'
-			precio: 350
-			categoria: 'Pizzas'.
-mercaderia2 := Bebida
-			crearBebidaId: 2
-			nombre: 'Cocacola'
-			descripcion: 'Botella de cocacola pequeña'
-			precio: 120
-			Mililitros: 600.
-mercaderia3 := Comida
-			crearComidaId: 3
-			nombre: 'Ravioles de ricota'
-			descripcion: 'Ravioles de ricota con salsa filetto'
-			precio: 600
-			categoria: 'Pastas'.
-mercaderia4 := Bebida
-			crearBebidaId: 4
-			nombre: 'Sprite'
-			descripcion: 'Botella grande'
-			precio: 200
-			Mililitros:2000.
-
-"Agregar mercaderias al menu del negocio"
-negocio agregarMercaderia: mercaderia1.
-negocio agregarMercaderia: mercaderia2.
-negocio agregarMercaderia: mercaderia3.
-negocio agregarMercaderia: mercaderia4.
-
-"Seleccionar mercaderias de menu y crear pedido"
-lista := OrderedCollection new.
-lista2 := OrderedCollection new.
-lista3 := OrderedCollection new.
-lista add: mercaderia1.
-lista add: mercaderia2.
-lista add: mercaderia3.
-lista2 add: mercaderia2.
-lista2 add: mercaderia4.
-lista3 add: mercaderia1.
-lista3 add: mercaderia2.
-pedido1 := Pedido crearPedidoNumero: 1 Mercaderias: lista.
-pedido2 := Pedido crearPedidoNumero: 2 Mercaderias: lista2.
-pedido3 := Pedido crearPedidoNumero: 3 Mercaderias: lista3.
-negocio cobrarPedido: pedido1.
-negocio cobrarPedido: pedido2.
-negocio cobrarPedido: pedido3.
-
-negocio inspect.
-
-"Collect obtener las categorias de todas las comidas"
-negocio verCategoriasComidas inspect.
-
-"Detect obtener un pedido por numero de pedido"
-(negocio buscarPedidoPorNumero:5) inspect.
-
-"Sort ordenar por mayor a menor precio las mercaderias"
-(negocio ordenarMercaderiasPorMayorPrecio) inspect.
-
-"Diccionario"
-(negocio verOcurrenciasMercaderia) inspect.
-
-"Reject obtener mercaderias por tipo"
-(negocio verMercaderiaTipo: 'Bebida') inspect.
-
-"Select Pedidos mayores a $500"
-(negocio verPedidosMayoresA: 500) inspect.
-
+negocioSim inspect

@@ -26866,3 +26866,1940 @@ continuar := true.
 		opcion = '4' ifTrue: [continuar := false]].
 miNegocio inspect!
 
+Negocio removeSelector: #actualizarRecaudacion ifAbsent: []!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				Transcript
+					show: 'Mercaderias del menú de tipo comida:' , miNegocio verMercaderiaTipo: 'Comida' printString;
+					cr.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				miNegocio verMercaderiaTipo: 'Comida'.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				miNegocio verMercaderiaTipo: 'Comida'.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				miNegocio verMercaderiaTipo: 'Comida' inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				( miNegocio verOcurrenciasMercaderia) inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosM600 := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosM600 size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600 inspect.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+	x notify: 'OrdenarMercaderiasPorPrecio'.
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+	x notify: 'OrdenarMercaderiasPorPrecio'.
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+	x notify: 'OrdenarMercaderiasPorPrecio'.
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+MessageBox notify: '��Es una prueba nada más'. 
+
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+MessageBox notify: 'Ordenar mercaderias por mayor precio'. 
+
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+"MessageBox notify: 'Ordenar mercaderias por mayor precio'. "
+
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+"MessageBox notify: 'Ordenar mercaderias por mayor precio'. "
+
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect: 'Ordenar por mayor' .
+].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+"MessageBox notify: 'Ordenar mercaderias por mayor precio'. "
+
+	^listaOrdenada inspect .! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+"MessageBox notify: 'Ordenar mercaderias por mayor precio'. "
+
+	^listaOrdenada inspect.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio.
+].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect.!
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+	^listaOrdenada inspect.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+!Negocio methodsFor!
+ordenarMercaderiasPorMayorPrecio
+	| listaOrdenada x |
+	listaOrdenada := SortedCollection new sortBlock: [:x :y | x verPrecio >= y verPrecio].
+	1 to: Menu size do: [:i | listaOrdenada add: (Menu at: i)].
+
+	^listaOrdenada.! !
+!Negocio categoriesFor: #ordenarMercaderiasPorMayorPrecio!public! !
+
+Transcript clear.
+miNegocio := Negocio
+			crearNegocioNombre: 'FASTFOOD'
+			Direccion: 'Av. San martin 1200'
+			Telefono: '42569212'.	"Crear negocio"
+"Crear mercaderías"
+m1 := Comida
+			crearComidaId: '1'
+			nombre: 'Pizza Mozzarella'
+			descripcion: 'Pizza con queso mozzarella al horno'
+			precio: 350
+			categoria: 'Pizzas'.
+m2 := Bebida
+			crearBebidaId: '2'
+			nombre: 'Cocacola'
+			descripcion: 'Botella de cocacola pequeña'
+			precio: 120
+			Mililitros: 600.
+m3 := Comida
+			crearComidaId: '3'
+			nombre: 'Ravioles de ricota'
+			descripcion: 'Ravioles de ricota con salsa filetto'
+			precio: 600
+			categoria: 'Pastas'.
+m4 := Bebida
+			crearBebidaId: '4'
+			nombre: 'Sprite'
+			descripcion: 'Botella grande'
+			precio: 200
+			Mililitros: 2000.
+"Agregar mercaderias al menu del negocio"
+miNegocio agregarMercaderia: m1.
+miNegocio agregarMercaderia: m2.
+miNegocio agregarMercaderia: m3.
+miNegocio agregarMercaderia: m4.
+
+"Opciones del negocio"
+continuar := true.
+[continuar] whileTrue: 
+		[| opcion |
+		opcion := Prompter
+					prompt: 'Elija que quiere hacer: 1.-Tomar pedido, 2.-Ver Pedidos, 3.-Ver Estadísticas, 4.-Salir'
+					caption: 'Opciones del negocio ' , miNegocio verNombre printString.
+		opcion = '1'
+			ifTrue: 
+				["Tomar un pedido"
+				mercaderias := (Prompter prompt: 'Ingresa los números de mercaderías' caption: 'Ingresa tu pedido')
+							subStrings.
+				unPedido := Pedido crearPedidoNumero: miNegocio verContadorPedidos Mercaderias: mercaderias.
+				valido := unPedido validar: miNegocio verMenu.
+				valido
+					ifFalse: 
+						[MessageBox notify: 'Tu pedido no se realizará, porque las marcaderias no son correctas'
+							caption: 'Error en tu pedido']
+					ifTrue: 
+						[unPedido calcularPrecioTotal: miNegocio verMenu.
+						miNegocio cobrarPedido: unPedido.
+						"unPedido verMercaderias inspect."
+						MessageBox
+							notify: 'Detalles del pedido:' , Character cr , 'Nro.:' , unPedido verNumero printString
+									, '  Total $' , unPedido verPrecioTotal printString
+							caption: 'Pedido exitoso']].
+		opcion = '2'
+			ifTrue: 
+				["Mostrar los pedidos"
+				n := miNegocio verPedidos size.
+				mensaje := ''.
+				n = 0
+					ifFalse: 
+						[mensaje := 'El total de pedidos es:' , n printString , Character cr.
+						ped := miNegocio buscarPedidoPorNumero: n.
+						mensaje := mensaje , 'El último pedido es:' , Character cr.
+						mensaje := mensaje , 'Nro.: ' , ped verNumero printString , '  a las ' , ped verHora printString
+									, 'hs  $' , ped verPrecioTotal printString]
+					ifTrue: [mensaje := 'No hay pedidos todavía'].
+				MessageBox notify: mensaje caption: 'Viendo los Pedidos'].
+		opcion = '3'
+			ifTrue: 
+				["Mostrar estadísticas"
+				Transcript show.
+				Transcript
+					cr;
+					cr.
+				Transcript
+					show: 'Estadística de día: ' , Date today printString , ' a las ' , Time now printString;
+					cr.
+				Transcript
+					show: 'Contador de Pedidos: ' , miNegocio verContadorPedidos printString;
+					cr.
+				Transcript
+					show: 'Total de pedidos: ' , miNegocio verPedidos size printString;
+					cr.
+				Transcript
+					show: 'Total recaudado $' , miNegocio verRecaudacion printString;
+					cr.
+				pedidosMayoresA := miNegocio verPedidosMayoresA: 600.
+				Transcript
+					show: 'Total pedidos mayores a $600: ' , pedidosMayoresA size printString;
+					cr.
+				(miNegocio verMercaderiaTipo: 'Comida') inspect.
+				pedidosM600 inspect.
+				miNegocio verOcurrenciasMercaderia inspect.
+				miNegocio verCategoriasComidas inspect.
+				miNegocio ordenarMercaderiasPorMayorPrecio inspect.
+].
+		opcion = '4' ifTrue: [continuar := false]].
+miNegocio inspect.!
+
+"22:41:24, 07 July 2021: Image saved"!
+
+"22:42:23, 11 July 2021: Dolphin Smalltalk Professional started"!
+
+!Negocio methodsFor!
+verPedidosMayoresA: unPrecio
+"Select Pedidos mayores a un precio"
+|col|
+col:= Pedidos select:[:pedido| pedido verPrecioTotal >= unPrecio ].
+^col.! !
+!Negocio categoriesFor: #verPedidosMayoresA:!public! !
+
+!Negocio methodsFor!
+verOcurrenciasMercaderia
+	| lista listaSR diccionario |
+	lista := OrderedCollection new.	"lista con todas las mercaderias pedidas"
+	1 to: Pedidos size
+		do: 
+			[:i |
+			1 to: (Pedidos at: i) verMercaderias size
+				do: [:j | lista add: ((self obtenerMercaderiasPorPedido: (Pedidos at: i)) at: j)]].
+	listaSR := lista asSet.	"Lista con mercaderias sin repetir"
+	diccionario := Dictionary new.
+	listaSR do: [:nom | diccionario at: nom verNombre put: (lista occurrencesOf: nom)].
+	^diccionario
+
+
+
+
+	"
+lista := OrderedCollection new.	
+	1 to: Pedidos size
+		do: 
+			[:i |
+			1 to: (Pedidos at: i) verMercaderias size
+				do: [:j | lista add: ((Pedidos at: i) verMercaderias at: j)]].
+	listaSR := lista asSet.	
+	diccionario := Dictionary new.
+	listaSR do: [:nom | diccionario at: nom put: (lista occurrencesOf: nom)].
+	^Pedidos"! !
+!Negocio categoriesFor: #verOcurrenciasMercaderia!public! !
+
+!Negocio methodsFor!
+verMercaderiaTipo:unTipo
+
+|col|
+col := Menu reject:[:mercaderia| mercaderia  verTipo ~= unTipo].
+^col.! !
+!Negocio categoriesFor: #verMercaderiaTipo:!public! !
+
+!Negocio methodsFor!
+obtenerMercaderiasPorPedido: unPedido
+	| m listaMercaderias listaFinal |
+	listaFinal := OrderedCollection new.
+	listaMercaderias := unPedido verMercaderias.
+	1 to: listaMercaderias size
+		do: 
+			[:i |
+			m := Menu detect: [:mercaderia | mercaderia verId = (listaMercaderias at: i)] ifNone: [^nil].
+			listaFinal add: m].
+	^listaFinal! !
+!Negocio categoriesFor: #obtenerMercaderiasPorPedido:!public! !
+
+| tipo |
+nombreNegocio := Prompter prompt: 'Ingrese el nombre del negocio'.
+dir := Prompter prompt: 'Ingrese la direccion del negocio'.
+tel := Prompter prompt: 'Ingrese el telefono del negocio'.
+negocioSim := Negocio
+			crearNegocioNombre: nombreNegocio
+			Direccion: dir
+			Telefono: tel.
+[tipo ~= '0'] whileTrue: 
+		[tipo := Prompter prompt: 'Ingrese 1 si es bebida, 2 si es comida o 0 para terminar.'.
+		tipo = '1'
+			ifTrue: 
+				[id := Prompter prompt: 'Ingrese el identificador de la mercaderia'.
+				nombre := Prompter prompt: 'Ingrese el nombre de la bebida'.
+				desc := Prompter prompt: 'Ingrese la descripcion la bebida'.
+				precio := Prompter prompt: 'Ingrese el precio la bebida'.
+				mililitros := Prompter prompt: 'Ingrese los mililitros la bebida'.
+				bebida := Bebida
+							crearBebidaId: id
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							Mililitros: mililitros.
+				negocioSim agregarMercaderia: bebida].
+		tipo = '2'
+			ifTrue: 
+				[id := Prompter prompt: 'Ingrese el identificador de la mercaderia'.
+				nombre := Prompter prompt: 'Ingrese el nombre de la comida'.
+				desc := Prompter prompt: 'Ingrese la descripcion de la comida'.
+				precio := Prompter prompt: 'Ingrese el precio de la comida'.
+				categoria := Prompter prompt: 'Ingrese la categoria de la comida'.
+				comida := Comida
+							crearComidaId: id
+							nombre: nombre
+							descripcion: desc
+							precio: precio
+							categoria: categoria.
+				negocioSim agregarMercaderia: comida]].
+negocioSim inspect!
+
+"00:14:04, 12 July 2021: Image saved"!
+
+"00:14:08, 12 July 2021: Image saved"!
+
+"00:14:19, 12 July 2021: Dolphin Smalltalk Professional started"!
+
